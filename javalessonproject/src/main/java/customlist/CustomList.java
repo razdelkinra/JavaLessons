@@ -1,4 +1,4 @@
-package main.java.customlist;
+package customlist;
 
 /**
  * interface for dynamic array

@@ -1,4 +1,4 @@
-package main.java.customlist;
+package customlist;
 /**
  * Implementation CustomList interface
  */
@@ -41,4 +41,6 @@ public class CustomListImpl<T> implements CustomList<T> {
     public int size() {
         return size;
     }
+
+
 }
