@@ -1,4 +1,4 @@
-package customlist;
+package com.prog.lessons.customlist;
 
 /**
  * interface for dynamic array
