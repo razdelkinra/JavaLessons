@@ -8,7 +8,7 @@ public interface CustomList<T> {
     /**
      * add new item to collection
      */
-    boolean add(T t);
+    void add(T t);
 
     /**
      * remove item from collection

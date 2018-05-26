@@ -13,6 +13,7 @@ public class UserController {
         switch (command) {
             case "1":
                 // TODO: операция согласно команде №1
+
                 break;
             case "2":
                 // TODO: операция согласно команде №2

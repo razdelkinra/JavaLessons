@@ -31,7 +31,7 @@ public class ControllerUserService {
     }
 
     /**
-     * Read command from console for crate new Employee
+     * Read command from console for delete new Employee
      */
     public void deleteUsers(String command) {
 
