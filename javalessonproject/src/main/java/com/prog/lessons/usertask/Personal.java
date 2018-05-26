@@ -1,3 +1,5 @@
+package com.prog.lessons.usertask;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -7,9 +9,8 @@ import java.util.TreeMap;
 public class Personal {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-                Map<Integer,String> personal = new TreeMap<Integer,String>();
-        while (true)
-        {
+        Map<Integer, String> personal = new TreeMap<Integer, String>();
+        while (true) {
             System.out.println("Введите id сотрудника");
             String id = reader.readLine();
             if (id.isEmpty())
@@ -21,9 +22,8 @@ public class Personal {
         }
         // удаление узера с id 13
         personal.remove(13);
-        for (Map.Entry<Integer,String> pair : personal.entrySet())
-        {
-            System.out.println("id " +pair.getKey()  + " - " + pair.getValue() );
+        for (Map.Entry<Integer, String> pair : personal.entrySet()) {
+            System.out.println("id " + pair.getKey() + " - " + pair.getValue());
         }
     }
 }
