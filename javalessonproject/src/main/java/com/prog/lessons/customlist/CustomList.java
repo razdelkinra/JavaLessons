@@ -8,12 +8,12 @@ public interface CustomList<T> {
     /**
      * add new item to collection
      */
-    void add(T t);
+    boolean add(T t);
 
     /**
      * remove item from collection
      */
-    void remove(T t);
+    T remove(int i);
 
     /**
      * get item from collection
