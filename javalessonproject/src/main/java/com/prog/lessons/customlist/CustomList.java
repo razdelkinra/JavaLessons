@@ -3,7 +3,7 @@ package com.prog.lessons.customlist;
 /**
  * interface for dynamic array
  */
-public interface CustomList<T> {
+public interface CustomList<T> extends Iterable {
 
     /**
      * add new item to collection
@@ -13,7 +13,7 @@ public interface CustomList<T> {
     /**
      * remove item from collection
      */
-    void remove(T t);
+    void remove(int index);
 
     /**
      * get item from collection
@@ -24,4 +24,6 @@ public interface CustomList<T> {
      * @return size of array
      */
     int size();
+
+
 }
