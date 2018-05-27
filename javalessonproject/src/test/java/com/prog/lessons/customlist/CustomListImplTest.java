@@ -21,6 +21,7 @@ public class CustomListImplTest {
         System.out.println( customList.get(1));
              customList.remove(0);
         System.out.println( customList.get(0));
+        System.out.println( customList.size());
     }
 
     @Test
