@@ -1,5 +1,6 @@
 package com.prog.lessons.customlist;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -9,28 +10,31 @@ import static org.junit.Assert.assertEquals;
  */
 public class CustomListImplTest {
 
+    CustomList<String> customList;
+
+    @Before
+    public void init() {
+        customList = new CustomListImpl();
+        //customList.add("1 object");
+        for (int i = 0; i < 100; i++) {
+            customList.add(i + " object");
+        }
+    }
+
     @Test
     public void getTest() {
-
-        CustomList<String> customList = new CustomListImpl();
-        customList.add("1 object");
-        customList.add("2 object");
-        customList.add("3 object");
-       // assertEquals(1, customList.size());
-        System.out.println( customList.get(0));
-        System.out.println( customList.get(1));
-             customList.remove(0);
-        System.out.println( customList.get(0));
-        System.out.println( customList.size());
+        assertEquals("0 object", customList.get(0));
+        assertEquals("1 object", customList.get(1));
     }
 
     @Test
     public void removeTest() {
-
+        assertEquals(99, customList.size());
     }
 
     @Test
     public void addTest() {
+        assertEquals(100, customList.size());
 
     }
 }
