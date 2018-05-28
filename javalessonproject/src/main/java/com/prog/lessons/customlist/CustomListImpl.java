@@ -33,15 +33,15 @@ public class CustomListImpl<T> implements CustomList<T> {
     @Override
     public T remove(int index) {
 
-        Object[] temp = array;
-        array = (T[]) new Object[index];
-        System.arraycopy(temp, 0, array, 0, index);
+        T temp = array[index];
         int numMoved = size - index - 1;
-        System.arraycopy(temp, index + 1, array, index, numMoved); // Слишком медленно будет работать
+        System.arraycopy(array, index + 1, array, index, numMoved); // Слишком медленно будет работать
         array[--size] = null;
-        return (T) array;
+        return temp;
 
     }
+
+
 
     @Override
     public T get(int index)
