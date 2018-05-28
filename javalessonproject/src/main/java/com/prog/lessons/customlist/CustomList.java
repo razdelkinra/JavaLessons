@@ -8,12 +8,12 @@ public interface CustomList<T> extends Iterable {
     /**
      * add new item to collection
      */
-    void add(T t);
+    boolean add(T t);
 
     /**
      * remove item from collection
      */
-    void remove(int index);
+    T remove(int index);
 
     /**
      * get item from collection

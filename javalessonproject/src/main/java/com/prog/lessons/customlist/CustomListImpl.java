@@ -11,47 +11,47 @@ public class CustomListImpl<T> implements CustomList<T> {
 
     private T[] array;
 
-    private int size; // внедрить
+    private int size;
 
     public CustomListImpl() {
-        array = (T[]) new Object[0];
+        array = (T[]) new Object[16];
     }
 
     private static final Object[] DEFAULT_CAPACITY = {};
 
     @Override
-    public void add(T t) {
-        Object[] temp = array;
-        array = (T[]) new Object[temp.length + 1];
-        System.arraycopy(temp, 0, array, 0, temp.length); // Слишком медленно будет работать,
-        // сделать по другому. При добавлении нового элемента, если он выходит за пределы массива, увеличивать размер вдвое
-        array[array.length - 1] = t;
+        public boolean add(final T t) {
+        if (size == array.length) {
+            T[] temp = array;
+            array = (T[]) new Object[(this.size() * 2)];
+            System.arraycopy(temp, 0, array, 0, temp.length);
+        }
+        array[size++] = t;
+        return true;
     }
 
-
     @Override
-    public void remove(int index) {
-        // TODO: implements method remove. Make him return boolean value!
-        // булин будет если идет удаление по значению.
+    public T remove(int index) {
 
         Object[] temp = array;
-        array = (T[]) new Object[temp.length - 1];
+        array = (T[]) new Object[index];
         System.arraycopy(temp, 0, array, 0, index);
-        int numMoved = array.length - index - 1;
+        int numMoved = size - index - 1;
         System.arraycopy(temp, index + 1, array, index, numMoved); // Слишком медленно будет работать
+        array[--size] = null;
+        return (T) array;
 
     }
 
     @Override
-    public T get(int index) {
+    public T get(int index)
+    {
         return array[index]; // верно
     }
 
     @Override
     public int size() {
-        return array.length; // сделать отдельную переменную size,
-        // т.к придеться каждый раз при добавлении массива копировать массив,
-        // как ты сделал
+        return size;
     }
 
     @Override
