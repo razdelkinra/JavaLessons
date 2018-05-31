@@ -29,6 +29,7 @@ public class CustomListImplTest {
 
     @Test
     public void removeTest() {
+        customList.remove(1);
         assertEquals(99, customList.size());
     }
 
