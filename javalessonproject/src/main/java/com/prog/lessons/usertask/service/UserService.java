@@ -3,6 +3,7 @@ package com.prog.lessons.usertask.service;
 
 import com.prog.lessons.usertask.users.User;
 
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -12,7 +13,7 @@ public interface UserService {
 
     void deleteUsers(User user);
 
-    void create(User user);
+    void create(User user) throws IOException;
 
     void createEmployee(User user);
 

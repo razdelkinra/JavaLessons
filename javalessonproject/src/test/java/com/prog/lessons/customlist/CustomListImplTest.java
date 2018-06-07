@@ -3,8 +3,6 @@ package com.prog.lessons.customlist;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
-
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -12,15 +10,15 @@ import static org.junit.Assert.assertEquals;
  */
 public class CustomListImplTest {
 
- CustomListImpl<String> customList;
+    CustomList<String> customList;
 
     @Before
     public void init() {
-        customList = new CustomListImpl<>();
+        customList = new CustomListImpl();
         //customList.add("1 object");
-        for (int i = 0; i < 1000000; i++) {
-            customList.add(i + " object");}
-
+        for (int i = 0; i < 100; i++) {
+            customList.add(i + " object");
+        }
     }
 
     @Test
@@ -31,13 +29,14 @@ public class CustomListImplTest {
 
     @Test
     public void removeTest() {
-        customList.remove(10);
-        assertEquals(999999, customList.size());
+        customList.remove(1);
+        assertEquals(99, customList.size());
     }
 
     @Test
     public void addTest() {
-        assertEquals(1000000, customList.size());
+        assertEquals(100, customList.size());
 
     }
 }
+

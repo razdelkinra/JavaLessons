@@ -13,7 +13,7 @@ public class ArrayIterator<T> implements Iterator {
     @Override
     public boolean hasNext() {
         return index < array.length;
-    }
+    } // не будет работать, почему подумать
 
     @Override
     public T next() {

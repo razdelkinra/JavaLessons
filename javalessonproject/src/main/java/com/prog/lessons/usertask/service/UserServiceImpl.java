@@ -5,7 +5,9 @@ import com.prog.lessons.usertask.data.Storage;
 import com.prog.lessons.usertask.users.User;
 import com.prog.lessons.usertask.utils.UserFileWriter;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +16,8 @@ import java.util.List;
  */
 public class UserServiceImpl implements UserService {
     private Storage storage = new Storage();
-    UserFileWriter userFileWriter = new UserFileWriter();
+    //UserFileWriter userFileWriter = new UserFileWriter();
+
 
     @Override
     public void deleteUsers(User user) {
@@ -26,13 +29,16 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void create(User user) {
+    public void create(User user) throws IOException {
+
+
 
     }
 
     @Override
     public void createEmployee(User user) {
 
+        storage.setServiceWorkers();
     }
 
     @Override

@@ -6,21 +6,18 @@ import java.util.Iterator;
  * Implementation CustomList interface
  */
 public class CustomListImpl<T> implements CustomList<T> {
-
-    // Object[] array = new Object[0]; !!! array = ( T[] )new Object[0] + конструктор ; ЧЕМ ОТЛИЧАЮТСЯ? get(index) не принимал в первом случае
+    public static final int DEFAULT_SIZE = 16;
 
     private T[] array;
 
     private int size;
 
     public CustomListImpl() {
-        array = (T[]) new Object[16];
+        array = (T[]) new Object[DEFAULT_SIZE]; // константы выделяй в статические финальные поля ctrl + alt + c
     }
 
-    private static final Object[] DEFAULT_CAPACITY = {};
-
     @Override
-        public boolean add(final T t) {
+    public boolean add(final T t) {
         if (size == array.length) {
             T[] temp = array;
             array = (T[]) new Object[(this.size() * 2)];
@@ -35,18 +32,14 @@ public class CustomListImpl<T> implements CustomList<T> {
 
         T temp = array[index];
         int numMoved = size - index - 1;
-        System.arraycopy(array, index + 1, array, index, numMoved); // Слишком медленно будет работать
+        System.arraycopy(array, index + 1, array, index, numMoved);
         array[--size] = null;
         return temp;
-
     }
 
-
-
     @Override
-    public T get(int index)
-    {
-        return array[index]; // верно
+    public T get(int index) {
+        return array[index];
     }
 
     @Override
@@ -57,5 +50,26 @@ public class CustomListImpl<T> implements CustomList<T> {
     @Override
     public Iterator iterator() {
         return new ArrayIterator<>(array);
+    }
+
+    public class ArrayIterator<T> implements Iterator {
+        private int index = 0;
+        T[] array;
+
+        public ArrayIterator(T[] array) {
+            this.array = array;
+        }
+
+        @Override
+        public boolean hasNext() {
+            return index < CustomListImpl.this.size;
+        }
+
+        @Override
+        public T next() {
+            return array[index++];
+        }
+
+
     }
 }

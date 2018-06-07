@@ -16,9 +16,18 @@ public class ControllerUserService {
     UserServiceImpl userService = new UserServiceImpl();
     UserFileWriter userFileWriter = new UserFileWriter();
 
+
+
+    public void create(String command) {
+
+
+    }
+
     /**
      * Read command from console for crate new Manager
      */
+
+
     public void createManager(String command) {
 
     }
