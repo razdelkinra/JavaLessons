@@ -3,12 +3,12 @@ package com.prog.lessons.Task_9_185;
 import java.util.Stack;
 
 public class Task_9_185 {
-    //Строка содержит арифметическое вырожение. Проверить правильно ли в нем расставлены круглые скобки
+    //Строка содержит арифметическое выражение. Проверить правильно ли в нем расставлены круглые скобки
     //а) ответом должно служить да или нет
     //в) если имеются лишние правые скобки, то выдать индекс первой такой скобки
     // если имеются лишние левые то указать количество таких скобок
 
-    public static boolean isParenthesisMatch(String str) {
+    public static boolean isParenthesisMatch(String str) { // static убрать. не забывай ctrl + alt + l
         Stack<Character> stack = new Stack<>();
         char c;
         int n =0;
@@ -31,7 +31,7 @@ public class Task_9_185 {
 
                 else
                     return false;
-            if ((i==str.length()-1) && n>0)
+            if ((i==str.length()-1) && n>0) // почему две && пишут знаешь???
                 System.out.println("Лишние открывающиеся скобки в количестве: " + n + " штук");
         }
 
@@ -40,7 +40,8 @@ public class Task_9_185 {
     }
         public static void main (String args[]){
 
-            System.out.println(isParenthesisMatch("(a+b)(a-b) = (a-b)(a+b)"));
+            System.out.println(isParenthesisMatch("(a+b)(a-b) = (a-b)(a+b)")); // тест сам просится))
+
         }
 
 

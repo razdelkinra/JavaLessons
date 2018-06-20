@@ -19,10 +19,11 @@ public class CRM {
 
             case "1":
 
-                Controller controller = new Controller(reader, personal);
+                Controller controller = new Controller(reader, personal); // controller серенький, нигде не спользуется
+                // раскидай из main логику по классам, это паскаль стиль
 
 
-                Writer writer = null;
+                Writer writer = null; // логика чтения отдельный класс
 
                 try {
                     writer = new FileWriter("C:\\Users\\Roman\\IdeaProjects\\JavaLessonsoriginal\\javalessonproject\\src\\main\\resources\\personal.txt",true);
@@ -40,7 +41,7 @@ public class CRM {
                 }
                 break;
 
-            case "2":
+            case "2": // это в контроллере должно быть
                 FileReader fr= new FileReader("C:\\Users\\Roman\\IdeaProjects\\JavaLessonsoriginal\\javalessonproject\\src\\main\\resources\\personal.txt");
                 Scanner scan = new Scanner(fr);
 

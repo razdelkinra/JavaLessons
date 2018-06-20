@@ -10,7 +10,8 @@ public class Controller {
 
     }
 
-    private static void Controller(BufferedReader reader, List<Humans> personal) throws IOException {
+    private static void Controller(BufferedReader reader, List<Humans> personal) throws IOException { // избегай static методов
+        // названия всегда с маленькой буквы. Почитать справочник по java 8, там вся теория что нужна в работе
         String ifirstname;
         String ilastname;
         String imobilenumber;
