@@ -19,31 +19,11 @@ public class CRM {
 
             case "1":
 
-                while (true) {
-
-                    System.out.println("Введите имя сотрудника");
-                    ifirstname = reader.readLine();
-
-                    if (ifirstname.isEmpty())
-                        break;
-
-
-                    System.out.println("Введите фамилию сотрудника");
-                    ilastname = reader.readLine();
-
-                    System.out.println("Введите телефон сотрудника");
-                    imobilenumber = reader.readLine();
-
-                    System.out.println("Введите возраст сотрудника");
-                    iage = reader.readLine();
-                    int iage1 = Integer.parseInt(iage);
-                    personal.add(new Humans(ifirstname, ilastname, imobilenumber, iage1));
-                    Collections.sort(personal, new Humans(ifirstname, ilastname, imobilenumber, iage1));
-
-                }
+                Controller controller = new Controller(reader, personal);
 
 
                 Writer writer = null;
+
                 try {
                     writer = new FileWriter("C:\\Users\\Roman\\IdeaProjects\\JavaLessonsoriginal\\javalessonproject\\src\\main\\resources\\personal.txt",true);
                     for (Object person : personal) {
@@ -75,5 +55,7 @@ public class CRM {
         }
 
     }
+
+
 }
 

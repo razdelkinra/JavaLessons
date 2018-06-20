@@ -32,13 +32,12 @@ public class UserServiceImpl implements UserService {
     public void create(User user) throws IOException {
 
 
-
     }
 
     @Override
     public void createEmployee(User user) {
 
-        storage.setServiceWorkers();
+
     }
 
     @Override
@@ -69,10 +68,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void loadUsersFromFile() {
-        try {
+      /*  try {
             userFileWriter.downloadFromFile();
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }*/
     }
 }
