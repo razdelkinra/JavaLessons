@@ -8,7 +8,7 @@ public class Task_9_185 {
     //в) если имеются лишние правые скобки, то выдать индекс первой такой скобки
     // если имеются лишние левые то указать количество таких скобок
 
-    public static boolean isParenthesisMatch(String str) { // static убрать. не забывай ctrl + alt + l
+    public  boolean isParenthesisMatch(String str) { // static убрать. не забывай ctrl + alt + l
         Stack<Character> stack = new Stack<>();
         char c;
         int n =0;
@@ -21,7 +21,7 @@ public class Task_9_185 {
                 }
             else if (c == ')')
                 if (stack.empty()){
-                    System.out.println("Индекс лишней закрывающейся скобки" + str.indexOf(c,i));// 2 часа на эту строчку угробил
+                    System.out.println("Индекс лишней закрывающейся скобки" + str.indexOf(c,i));
                     return false;
             }
                 else if (stack.peek() == '('){
@@ -31,18 +31,17 @@ public class Task_9_185 {
 
                 else
                     return false;
-            if ((i==str.length()-1) && n>0) // почему две && пишут знаешь???
+            if ((i==str.length()-1) && n>0) // (почему две && пишут знаешь??? ) если первое выражение false, то второе проверятся не будет.
                 System.out.println("Лишние открывающиеся скобки в количестве: " + n + " штук");
         }
 
         return stack.empty();
 
     }
-        public static void main (String args[]){
 
-            System.out.println(isParenthesisMatch("(a+b)(a-b) = (a-b)(a+b)")); // тест сам просится))
+
+            //System.out.println(isParenthesisMatch("(a+b)(a-b) = (a-b)(a+b)")); // тест сам просится))
 
         }
 
 
-    }
