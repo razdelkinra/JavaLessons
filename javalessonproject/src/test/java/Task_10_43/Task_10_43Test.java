@@ -9,6 +9,6 @@ public class Task_10_43Test {
 Task_10_43 f = new Task_10_43();
     @Test
     public void sum() {
-        assertEquals(25, f.sum(65536));
+        assertEquals(25, f.getsumdigitsofnumber(65536));
     }
 }

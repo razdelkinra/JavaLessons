@@ -4,12 +4,9 @@ package Task_10_42;
 //для расчета степени n вещественного числа a (n — натуральное число).
 
 public class Task_10_42 {
-    public int pow (int a , int n) {
-        if (n == 0) {
-            return 1;
-        }
-        return a * pow(a, n - 1); // // используй тернарный оператор, и реформатор кода не забывай
+    public int pow(int a, int n) {
+        return (n == 0) ? 1 : a * pow(a, n - 1);
     }
 
 
-    }
+}

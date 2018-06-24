@@ -7,16 +7,12 @@ package com.prog.lessons.Task_10_44;
 
 public class Task_10_44 {
     public int sum(int n) {
-        if (n < 10) {
-            return n;
-        } else {
-            return n % 10 + sum(n / 10);
-        }
+        return (n < 10) ? n : n % 10 + sum(n / 10);
     }
-    public int cifrcor(int n){ // спользуй английские названия типа в котором содержится действие, н.п getDigitalRoot(int number)
-        if (sum(n)>9)
-            return sum(sum(n));
-        else return n; // используй тернарный оператор
+
+    public int getDigitalRoot(int n) { // спользуй английские названия типа в котором содержится действие, н.п getDigitalRoot(int number)
+
+        return (sum(n) > 9) ? sum(sum(n)) : n;
 
     }
 
