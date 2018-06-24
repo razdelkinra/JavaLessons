@@ -13,10 +13,14 @@ public class Task9166 {
         // Используй StringBuilder для формировании строки.
         // Вопрос почему его а не String? Чем отличается StringBuilder от StringBuffer?
         //StringBuilder быстрее, а второй исполльзуется в многопоточных задачах так как он безопаснее
+
+        // Не только поэтому. При конкатенации String что происходит, сколько объектов рождается??
+
+        // перепеши на
         words[words.length - 1] = tmp;
 
         for (String word : words) {
-            System.out.print(word + " ");
+            System.out.print(word + " "); // это самая новичковская ошибка. Перепиши на StringBuilder, и main убери
         }
          //return result;  вот на это можно будет тест написать теперь.
     }

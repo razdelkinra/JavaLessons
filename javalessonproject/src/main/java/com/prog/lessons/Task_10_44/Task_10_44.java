@@ -13,10 +13,10 @@ public class Task_10_44 {
             return n % 10 + sum(n / 10);
         }
     }
-    public int cifrcor(int n){
+    public int cifrcor(int n){ // спользуй английские названия типа в котором содержится действие, н.п getDigitalRoot(int number)
         if (sum(n)>9)
             return sum(sum(n));
-        else return n;
+        else return n; // используй тернарный оператор
 
     }
 

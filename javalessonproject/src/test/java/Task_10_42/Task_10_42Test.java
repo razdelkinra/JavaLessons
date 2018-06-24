@@ -13,6 +13,6 @@ Task_10_42 func = new Task_10_42();
     public void pow() {
 
 
-                assertEquals(8, func.pow(2 ,3));
+                assertEquals(8, func.pow(2 ,3)); // реформат кода просто просится
     }
 }

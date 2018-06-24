@@ -8,7 +8,7 @@ public class Task_10_42 {
         if (n == 0) {
             return 1;
         }
-        return a * pow(a, n - 1);
+        return a * pow(a, n - 1); // // используй тернарный оператор, и реформатор кода не забывай
     }
 
 

@@ -6,7 +6,7 @@ public class Task_10_41 {
         if (i == 1)
             return 1;
         rez = fact(i - 1) * i;
-        return rez;
+        return rez; // запиши этот метод в одну строчку, используй тернарный оператор
     }
 
 
