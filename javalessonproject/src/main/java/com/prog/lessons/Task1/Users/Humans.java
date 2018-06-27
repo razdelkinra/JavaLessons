@@ -1,4 +1,4 @@
-package com.prog.lessons.Task1;
+package com.prog.lessons.Task1.Users;
 
 
 import java.util.Comparator;
