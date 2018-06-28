@@ -17,5 +17,6 @@ public class Task9166 {
         String st = result.toString().substring(0, result.length() - 1);
 
         return st;
+        // return result.toString().substring(0, result.length() - 1);
     }
 }

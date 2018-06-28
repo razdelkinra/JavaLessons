@@ -17,7 +17,7 @@ public class Task_12_63 {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) { // в тест перенести
         Task_12_63 f = new Task_12_63();
         int[][] arr = {
                 {20, 10, 15, 20, 10, 15, 10, 15, 10, 10, 15},

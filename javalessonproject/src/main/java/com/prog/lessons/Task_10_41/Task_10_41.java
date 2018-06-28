@@ -7,5 +7,5 @@ public class Task_10_41 {
         return i == 1 ? 1 : fact(i - 1) * i;
     }
 
-
+// пустые строки удалить
 }

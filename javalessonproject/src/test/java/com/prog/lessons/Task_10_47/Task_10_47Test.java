@@ -9,5 +9,5 @@ Task_10_47 f = new Task_10_47();
     @Test
     public void getFibonachiNum() {
         assertEquals(21, f.getFibonachiNum(8));
-    }
+    } // Рефактор кода не забывай
 }

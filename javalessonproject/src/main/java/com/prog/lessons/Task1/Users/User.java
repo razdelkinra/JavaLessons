@@ -3,12 +3,12 @@ package com.prog.lessons.Task1.Users;
 
 import java.util.Comparator;
 
-public class Humans implements Comparator<Humans> {
+public class User implements Comparator<User> {
 
-    private String firstname, lastname, mobilenumber;
+    private String firstname, lastname, mobilenumber; // в каждую строчку
     private int age;
 
-    public Humans(String firstname, String lastname, String mobilenumber, int age) {
+    public User(String firstname, String lastname, String mobilenumber, int age) { // названия полей phoneNumber, lastName, firstName
         this.firstname = firstname;
         this.lastname = lastname;
         this.mobilenumber = mobilenumber;
@@ -53,7 +53,7 @@ public class Humans implements Comparator<Humans> {
 
 
     @Override
-    public int compare(Humans o1, Humans o2) {
+    public int compare(User o1, User o2) {
         return o1.getLastname().compareTo(o2.getLastname());
     }
 }

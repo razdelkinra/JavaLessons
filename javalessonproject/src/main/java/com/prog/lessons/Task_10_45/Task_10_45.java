@@ -12,12 +12,12 @@ public class Task_10_45 {
 
         if (index <= 1)
             return a;
-        else return d + getValueToIndex(index - 1);
+        else return d + getValueToIndex(index - 1); // использовать тернарный оператор
     }
 
     public int sumValueToIndex(int index) {
         if (index <= 1)
             return a;
-        else return sumValueToIndex(index - 1) + getValueToIndex(index);
+        else return sumValueToIndex(index - 1) + getValueToIndex(index); // использовать тернарный оператор
     }
 }
