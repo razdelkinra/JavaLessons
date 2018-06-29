@@ -4,13 +4,17 @@ import com.prog.lessons.Task1.Users.User;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ControllerService {
-
+    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    List<User> personal = new ArrayList<>();
     private Controller userController;
 
-    public  void execute(BufferedReader reader, List<User> personal) throws IOException {
+
+    public void execute() throws IOException {
         while (true) {
             System.out.println("1 -Введите нового сотрудника  2 - Список всех сотрудников");
             String comande = reader.readLine();
@@ -29,7 +33,7 @@ public class ControllerService {
                     break;
 
                 case "2":
-                    userController.view(); // printAllUsers()
+                    userController.printAllUsers();
                     break;
             }
         }

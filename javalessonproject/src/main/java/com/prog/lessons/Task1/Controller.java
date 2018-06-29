@@ -10,36 +10,36 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Controller {
-    public Controller(BufferedReader reader, List<User> personal) { // конструктор не нужен
-    }
-
     public void createNewPersonal(BufferedReader reader, List<User> personal) throws IOException {
-        String ifirstname, ilastname, imobilenumber, iage; // лучше писать в каждую строчку, для читабельности.
-        // i в названии убери, и camel case (lastName). i только для названия интерфейсов
-        while (true) { // цикл не нужен
+        String firstName,
+                lastName,
+                phoneNumber,
+                age;
+        while (true) { // цикл не нужен (я захотел чтобы после ввода сотрудников можно было вернуться сразу в меню выбора)
 
             System.out.println("Введите имя сотрудника");
-            ifirstname = reader.readLine();
+            firstName = reader.readLine();
 
-            if (ifirstname.isEmpty()) // если if то всегда скобки ставь {}
+            if (firstName.isEmpty()) {
                 break;
-
+            }
             System.out.println("Введите фамилию сотрудника");
-            ilastname = reader.readLine();
+            lastName = reader.readLine();
 
             System.out.println("Введите телефон сотрудника");
-            imobilenumber = reader.readLine();
+            phoneNumber = reader.readLine();
 
             System.out.println("Введите возраст сотрудника");
-            iage = reader.readLine();
-            int iage1 = Integer.parseInt(iage);
-            personal.add(new User(ifirstname, ilastname, imobilenumber, iage1));
-            Collections.sort(personal, new User(ifirstname, ilastname, imobilenumber, iage1)); // это при печати можно сделать,
+            age = reader.readLine();
+            int age1 = Integer.parseInt(age);
+            personal.add(new User(firstName, lastName, phoneNumber, age1));
+            Collections.sort(personal, new User(firstName, lastName, phoneNumber, age1)); // это при печати можно сделать,
             // тут только создание, personal.sort(new Comparator ....) сделаешь
+            // при
         }
     }
 
-    public static void view() throws IOException { // printAllUsers , static убери
+    public static void printAllUsers() throws IOException { // static убери (main статический же)
         FileReader fr = new FileReader("C:\\Users\\Roman\\IdeaProjects\\JavaLessonsoriginal\\javalessonproject\\src\\main\\resources\\personal.txt");
         Scanner scan = new Scanner(fr);
         int i = 1;

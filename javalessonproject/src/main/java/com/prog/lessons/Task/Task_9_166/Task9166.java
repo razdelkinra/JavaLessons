@@ -9,14 +9,10 @@ public class Task9166 {
         String tmp = words[0];
         words[0] = words[words.length - 1];
         words[words.length - 1] = tmp;
-
         StringBuilder result = new StringBuilder();
         for (String s : words) {
             result.append(s + " ");
         }
-        String st = result.toString().substring(0, result.length() - 1);
-
-        return st;
-        // return result.toString().substring(0, result.length() - 1);
+        return result.toString().substring(0, result.length() - 1);
     }
 }

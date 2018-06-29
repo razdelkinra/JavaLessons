@@ -5,38 +5,40 @@ import java.util.Comparator;
 
 public class User implements Comparator<User> {
 
-    private String firstname, lastname, mobilenumber; // в каждую строчку
+    private String firstName,
+            lastName,
+            phoneNumber;
     private int age;
 
-    public User(String firstname, String lastname, String mobilenumber, int age) { // названия полей phoneNumber, lastName, firstName
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.mobilenumber = mobilenumber;
+    public User(String firstName, String lastName, String phoneNumber, int age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
         this.age = age;
     }
 
     public String getFirstname() {
-        return firstname;
+        return firstName;
     }
 
     public void setFirstname(String firstname) {
-        this.firstname = firstname;
+        this.firstName = firstname;
     }
 
-    public String getLastname() {
-        return lastname;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    public String getMobilenumber() {
-        return mobilenumber;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setMobilenumber(String mobilenumber) {
-        this.mobilenumber = mobilenumber;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public int getAge() {
@@ -48,13 +50,13 @@ public class User implements Comparator<User> {
     }
 
     public String toString() {
-        return this.firstname + " " + this.lastname + " " + this.mobilenumber + " " + this.age;
+        return this.firstName + " " + this.lastName + " " + this.phoneNumber + " " + this.age;
     }
-
 
     @Override
     public int compare(User o1, User o2) {
-        return o1.getLastname().compareTo(o2.getLastname());
+        return o1.getLastName().compareTo(o2.getLastName());
     }
+
 }
 

@@ -15,6 +15,7 @@ public class Task_12_63 {
             }
             System.out.println("Среднее число учеников по " + (i + 1) + " параллели равно: " + sum / 4);
         }
+
     }
 
     public static void main(String[] args) { // в тест перенести
