@@ -5,23 +5,16 @@ import java.util.Comparator;
 
 public class User implements Comparator<User> {
 
-    private String firstName,
-            lastName,
-            phoneNumber;
+    private String firstName;
+    private String lastName;
+    private String phoneNumber;
     private int age;
-
-    public User(String firstName, String lastName, String phoneNumber, int age) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.phoneNumber = phoneNumber;
-        this.age = age;
-    }
 
     public String getFirstname() {
         return firstName;
     }
 
-    public void setFirstname(String firstname) {
+    public void setFirstName(String firstname) {
         this.firstName = firstname;
     }
 

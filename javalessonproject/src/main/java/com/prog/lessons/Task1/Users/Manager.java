@@ -5,13 +5,6 @@ public class Manager extends User {
     private String carNumber;
     private String yearBonus;
 
-    public Manager(String firstName, String lastName, String phoneNumber, int age) {
-        super(firstName, lastName, phoneNumber, age);
-    }
- public void createManager(){
-
- }
-
     public String getCarNumber() {
         return carNumber;
     }
