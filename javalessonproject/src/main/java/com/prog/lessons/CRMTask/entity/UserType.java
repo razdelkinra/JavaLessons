@@ -1,4 +1,4 @@
-package com.prog.lessons.Task1.entity;
+package com.prog.lessons.CRMTask.entity;
 
 import java.util.HashMap;
 import java.util.Map;

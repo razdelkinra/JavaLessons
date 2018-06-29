@@ -1,8 +1,8 @@
-package com.prog.lessons.Task1.controller;
+package com.prog.lessons.CRMTask.controller;
 
-import com.prog.lessons.Task1.entity.User;
-import com.prog.lessons.Task1.entity.UserType;
-import com.prog.lessons.Task1.exception.UserException;
+import com.prog.lessons.CRMTask.entity.User;
+import com.prog.lessons.CRMTask.entity.UserType;
+import com.prog.lessons.CRMTask.exception.UserException;
 
 import java.io.BufferedReader;
 import java.io.IOException;

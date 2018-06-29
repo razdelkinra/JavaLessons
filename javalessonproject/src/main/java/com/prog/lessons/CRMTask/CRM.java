@@ -1,7 +1,7 @@
-package com.prog.lessons.Task1;
+package com.prog.lessons.CRMTask;
 
-import com.prog.lessons.Task1.controller.UserController;
-import com.prog.lessons.Task1.exception.UserException;
+import com.prog.lessons.CRMTask.controller.UserController;
+import com.prog.lessons.CRMTask.exception.UserException;
 
 import java.io.IOException;
 

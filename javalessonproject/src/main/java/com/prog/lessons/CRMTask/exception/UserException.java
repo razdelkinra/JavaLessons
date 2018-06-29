@@ -1,4 +1,4 @@
-package com.prog.lessons.Task1.exception;
+package com.prog.lessons.CRMTask.exception;
 
 public class UserException extends Exception {
 

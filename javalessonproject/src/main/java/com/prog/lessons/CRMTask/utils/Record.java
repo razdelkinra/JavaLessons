@@ -1,6 +1,6 @@
-package com.prog.lessons.Task1.utils;
+package com.prog.lessons.CRMTask.utils;
 
-import com.prog.lessons.Task1.entity.User;
+import com.prog.lessons.CRMTask.entity.User;
 
 import java.io.FileWriter;
 import java.io.IOException;
