@@ -1,7 +1,7 @@
-package com.prog.lessons.Task1;
+package com.prog.lessons.Task1.controller;
 
-import com.prog.lessons.Task1.Users.User;
-import com.prog.lessons.Task1.Users.UserType;
+import com.prog.lessons.Task1.entity.User;
+import com.prog.lessons.Task1.entity.UserType;
 import com.prog.lessons.Task1.exception.UserException;
 
 import java.io.BufferedReader;

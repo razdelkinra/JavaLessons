@@ -1,7 +1,7 @@
 package com.prog.lessons.Task1.service;
 
-import com.prog.lessons.Task1.UserController;
-import com.prog.lessons.Task1.Users.Manager;
+import com.prog.lessons.Task1.controller.UserController;
+import com.prog.lessons.Task1.entity.Manager;
 import com.prog.lessons.Task1.exception.UserException;
 
 import java.io.BufferedReader;

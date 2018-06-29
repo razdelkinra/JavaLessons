@@ -1,4 +1,4 @@
-package com.prog.lessons.Task1.Users;
+package com.prog.lessons.Task1.entity;
 
 public class Manager extends User {
 

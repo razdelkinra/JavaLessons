@@ -1,4 +1,4 @@
-package com.prog.lessons.Task1.Users;
+package com.prog.lessons.Task1.entity;
 
 import java.util.HashMap;
 import java.util.Map;

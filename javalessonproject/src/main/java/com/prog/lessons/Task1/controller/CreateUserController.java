@@ -1,6 +1,6 @@
-package com.prog.lessons.Task1;
+package com.prog.lessons.Task1.controller;
 
-import com.prog.lessons.Task1.Users.UserType;
+import com.prog.lessons.Task1.entity.UserType;
 import com.prog.lessons.Task1.exception.UserException;
 import com.prog.lessons.Task1.service.UserService;
 
@@ -42,7 +42,7 @@ public class CreateUserController {
     }
 
     public static void printAllUsers() throws IOException { // static убери (main статический же)
-        FileReader fr = new FileReader("C:\\Users\\Roman\\IdeaProjects\\JavaLessonsoriginal\\javalessonproject\\src\\main\\resources\\personal.txt");
+        FileReader fr = new FileReader("C:\\entity\\Roman\\IdeaProjects\\JavaLessonsoriginal\\javalessonproject\\src\\main\\resources\\personal.txt");
         Scanner scan = new Scanner(fr);
         int i = 1;
         while (scan.hasNextLine()) {
