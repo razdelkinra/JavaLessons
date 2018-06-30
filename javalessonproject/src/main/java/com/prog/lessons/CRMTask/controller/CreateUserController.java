@@ -30,25 +30,14 @@ public class CreateUserController {
 
 
     private void createServiceWorker() {
-
+        // TODO:  создание сервисника
     }
 
     private void createSalesPerson() {
-
+        // TODO:  создание продавца
     }
 
     private void createManager() throws UserException, IOException {
         userService.createManager();
-    }
-
-    public static void printAllUsers() throws IOException { // static убери (main статический же)
-        FileReader fr = new FileReader("C:\\entity\\Roman\\IdeaProjects\\JavaLessonsoriginal\\javalessonproject\\src\\main\\resources\\personal.txt");
-        Scanner scan = new Scanner(fr);
-        int i = 1;
-        while (scan.hasNextLine()) {
-            System.out.println(i + " : " + scan.nextLine());
-            i++;
-        }
-        fr.close();
     }
 }

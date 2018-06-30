@@ -1,6 +1,7 @@
 package com.prog.lessons.CRMTask.entity;
 
-import java.util.HashMap;
+import com.prog.lessons.CRMTask.exception.UserException;
+
 import java.util.Map;
 
 public enum UserType {
@@ -27,14 +28,12 @@ public enum UserType {
 
     private static Map<Integer, UserType> userTypes;
 
-    static { // TODO: Перенести в общий класс
-        userTypes = new HashMap<Integer, UserType>();
+    public static UserType getById(int id) throws UserException {
         for (UserType userType : UserType.values()) {
-            userTypes.put(userType.id, userType);
+            if (userType.id == id) {
+                return userType;
+            }
         }
-    }
-
-    public static UserType getById(int id) {
-        return userTypes.get(id);
+        throw new UserException("Нет типа юзера с  id= " + id);
     }
 }

@@ -40,6 +40,8 @@ public class UserService {
         manager.setPhoneNumber(phoneNumber);
         manager.setAge(age);
         manager.setYearBonus(yearBonus);
-        userController.getPersonal().add(manager);
+        userController.getPersonal().add(manager); // тут StorageService вызываться будет
     }
+
+    // TODO:  методы по созданию остальных, общие поля можно как то выделить в отдельный метод
 }
