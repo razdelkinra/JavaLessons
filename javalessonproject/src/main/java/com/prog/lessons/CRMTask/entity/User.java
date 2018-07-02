@@ -42,8 +42,14 @@ public class User implements Comparator<User> {
         this.age = age;
     }
 
+    @Override
     public String toString() {
-        return this.firstName + " " + this.lastName + " " + this.phoneNumber + " " + this.age;
+        return "User{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", age=" + age +
+                '}';
     }
 
     @Override

@@ -20,4 +20,16 @@ public class Manager extends User {
     public void setYearBonus(String yearBonus) {
         this.yearBonus = yearBonus;
     }
+
+    @Override
+    public String toString() {
+        return "Manager{" +
+                "firstName='" + super.getFirstname() + '\'' +
+                ", lastName='" + super.getLastName() + '\'' +
+                ", phoneNumber='" + super.getPhoneNumber() + '\'' +
+                ", age=" + super.getAge() +
+                ", carNumber='" + carNumber + '\'' +
+                ", yearBonus='" + yearBonus + '\'' +
+                '}';
+    }
 }
