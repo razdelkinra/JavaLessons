@@ -25,4 +25,12 @@ public class PrintUserController {
     public void printListManager() {
         storageService.getManagers().forEach(manager -> System.out.println(manager.toString()));
     }
+
+    public void printListServiceWorkers() {
+        // TODO: print service workers
+    }
+
+    public void printListSales() {
+        // TODO: print sales
+    }
 }
