@@ -9,14 +9,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StorageService {
-    // TODO:  сделать класс StorageService
-    // перенести логику хранения туда, там будут getUsers  и addUser плюс сделать методы getManagers, getServiceWorkers, getSales ()
 
     private List<User> users = new ArrayList<>();
     private List<ServiceWorker> serviceWorkers = new ArrayList<>();
     private List<SalesPerson> salesPersons = new ArrayList<>();
-    private List<Manager> managers = new ArrayList<>();
-
     public List<User> getUsers() {
         return users;
     }
@@ -26,6 +22,7 @@ public class StorageService {
     }
 
     public List<Manager> getManagers() {
+        List<Manager> managers = new ArrayList<>();
         for (User manager : users) {
             if (manager instanceof Manager) {
                 managers.add((Manager) manager);

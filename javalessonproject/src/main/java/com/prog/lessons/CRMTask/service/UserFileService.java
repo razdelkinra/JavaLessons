@@ -11,9 +11,6 @@ import java.util.Scanner;
 
 public class UserFileService {
 
-    public UserFileService() throws FileNotFoundException {
-    }
-
     public void writeFromFile(List<User> users) throws IOException {
         try (FileWriter writer = new FileWriter("C:\\Users\\Roman\\IdeaProjects\\JavaLessonsoriginal\\javalessonproject\\src\\main\\resources\\personal.txt", true)) {
             for (User user : users) {
@@ -21,13 +18,12 @@ public class UserFileService {
             }
         }
     }
+
     public void readFile() throws FileNotFoundException {
         FileReader fr = new FileReader("C:\\Users\\Roman\\IdeaProjects\\JavaLessonsoriginal\\javalessonproject\\src\\main\\resources\\personal.txt");
         Scanner scan = new Scanner(fr);
-
-
     }
-    }
+}
 
 
 

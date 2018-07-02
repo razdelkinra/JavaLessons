@@ -42,7 +42,6 @@ public class UserService {
         manager.setAge(age);
         manager.setYearBonus(yearBonus);
         storageService.addUser(manager);
-
     }
 
     public void createServiceWorker() throws UserException, IOException {

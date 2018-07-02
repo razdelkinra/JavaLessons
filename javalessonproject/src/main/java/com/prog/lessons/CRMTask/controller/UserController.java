@@ -11,12 +11,13 @@ import java.io.InputStreamReader;
 
 public class UserController {
 
+    CreateUserController createUserController = new CreateUserController();
+    PrintUserController printUserController = new PrintUserController();
+    UserFileService userFileService = new UserFileService();
+    StorageService storageService = new StorageService();
+
     public void execute() throws IOException, UserException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        CreateUserController createUserController = new CreateUserController();
-        PrintUserController printUserController = new PrintUserController();
-        UserFileService userFileService = new UserFileService();
-        StorageService storageService = new StorageService();
 
         while (true) {
             printApi();
@@ -25,18 +26,27 @@ public class UserController {
                 case "1":
                     System.out.println("1 - Менеджер  2 - Продавец  3 - Сервисный инженер");
                     createUserController.createNewUser(UserType.getById(Integer.parseInt(reader.readLine())));
-                    userFileService.writeFromFile(storageService.getUsers());
                     break;
                 case "2":
                     printUserController.printAllUsers();
                     break;
+                case "3":
+                    // TODO: сделать поиск сотрудника по фамилии, и диапазону лет
+                    break;
+                case "0":
+                    userFileService.writeFromFile(storageService.getUsers());
+                    // TODO:  выход из консоли
+                    break;
+                default:
+                    throw new UserException("Unsupported command");
             }
         }
     }
 
     private void printApi() {
-        System.out.println("1 - Создать нового сотрудника" + "\n" + "2 - Получить список всех сотрудников");
+        System.out.println(
+                "1 - Создать нового сотрудника" + "\n" +
+                        "2 - Получить список всех сотрудников" + "\n" +
+                        "3 - Найти сотрудника");
     }
-
-
 }
