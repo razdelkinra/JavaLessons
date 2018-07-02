@@ -29,12 +29,15 @@ public class CreateUserController {
     }
 
 
-    private void createServiceWorker() {
-        // TODO:  создание сервисника
+    private void createServiceWorker() throws IOException, UserException {
+        // TODO:  создание сервисника(completed )
+        userService.createServiceWorker();
     }
 
-    private void createSalesPerson() {
-        // TODO:  создание продавца
+
+    private void createSalesPerson() throws IOException, UserException {
+        // TODO:  создание продавца(completed )
+        userService.createSalesPerson();
     }
 
     private void createManager() throws UserException, IOException {
