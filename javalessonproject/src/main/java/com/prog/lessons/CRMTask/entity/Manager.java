@@ -21,6 +21,32 @@ public class Manager extends User {
         this.yearBonus = yearBonus;
     }
 
+
+    @Override
+    public void setFirstName(String firstname) {
+        super.setFirstName(firstname);
+    }
+
+    @Override
+    public void setLastName(String lastName) {
+        super.setLastName(lastName);
+    }
+
+    @Override
+    public void setPhoneNumber(String phoneNumber) {
+        super.setPhoneNumber(phoneNumber);
+    }
+
+    @Override
+    public void setAge(int age) {
+        super.setAge(age);
+    }
+
+    @Override
+    public int compare(User o1, User o2) {
+        return super.compare(o1, o2);
+    }
+
     @Override
     public String toString() {
         return "Manager{" +

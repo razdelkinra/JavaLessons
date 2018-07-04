@@ -4,9 +4,7 @@ import com.prog.lessons.CRMTask.entity.UserType;
 import com.prog.lessons.CRMTask.exception.UserException;
 import com.prog.lessons.CRMTask.service.UserService;
 
-import java.io.FileReader;
 import java.io.IOException;
-import java.util.Scanner;
 
 public class CreateUserController {
 

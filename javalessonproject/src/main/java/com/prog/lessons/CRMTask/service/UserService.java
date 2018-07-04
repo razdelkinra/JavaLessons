@@ -13,6 +13,7 @@ public class UserService {
 
     BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     StorageService storageService = new StorageService();
+    UserFileService userFileService = new UserFileService();
 
     public void createManager() throws UserException, IOException {
         System.out.println("Введите имя сотрудника");
@@ -42,6 +43,7 @@ public class UserService {
         manager.setAge(age);
         manager.setYearBonus(yearBonus);
         storageService.addUser(manager);
+        userFileService.writeFromFile(storageService.getUsers());
     }
 
     public void createServiceWorker() throws UserException, IOException {
@@ -72,6 +74,7 @@ public class UserService {
         serviceWorker.setAge(age);
         serviceWorker.setNoteBookNumber(noteBookNumber);
         storageService.addUser(serviceWorker);
+        userFileService.writeFromFile(storageService.getUsers());
     }
 
     public void createSalesPerson() throws UserException, IOException {
@@ -101,6 +104,7 @@ public class UserService {
         salesPerson.setPhoneNumber(phoneNumber);
         salesPerson.setAge(age);
         salesPerson.setSalesLevel(salesLevel);
-        storageService.addUser(salesPerson); //
+        storageService.addUser(salesPerson);
+        userFileService.writeFromFile(storageService.getUsers());
     }
 }
