@@ -11,10 +11,10 @@ public class ReflectionUserService {
 
     public List<String> getFieldName(Class clazz) {
         List<String> fields = new ArrayList<>();
-        for (Field field : clazz.getDeclaredFields()) {
+        for (Field field : clazz.getSuperclass().getDeclaredFields()) {
             fields.add(field.getName());
         }
-        for (Field field : clazz.getSuperclass().getDeclaredFields()) {
+        for (Field field : clazz.getDeclaredFields()) {
             fields.add(field.getName());
         }
         return fields;

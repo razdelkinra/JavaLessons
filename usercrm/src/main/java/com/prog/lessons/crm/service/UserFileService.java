@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class UserFileService {
 
     public void writeFromFile(List<User> users) throws IOException {
-        try (FileWriter writer = new FileWriter("C:\\Users\\Roman\\IdeaProjects\\JavaLessonsoriginal\\javalessonproject\\src\\main\\resources\\users.txt", true)) {
+        try (FileWriter writer = new FileWriter("C:\\Users\\Roman\\IdeaProjects\\JavaLessonsoriginal\\usercrm\\src\\main\\resources\\users.txt", true)) {
             for (User user : users) {
                 writer.write(user + System.getProperty("line.separator"));
             }

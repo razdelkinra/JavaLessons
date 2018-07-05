@@ -12,7 +12,7 @@ import java.io.InputStreamReader;
 public class UserService {
 
     BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-    StorageService storageService = new StorageService();
+    StorageService storageService = StorageService.getInstance();
     UserFileService userFileService = new UserFileService();
 
     public void createManager() throws UserException, IOException {
@@ -24,6 +24,7 @@ public class UserService {
         }
         System.out.println("Введите фамилию сотрудника");
         String lastName = reader.readLine();
+
         if (lastName.isEmpty()) {
             throw new UserException("Фамилия юзера не может быть пустой");
         }
@@ -74,7 +75,7 @@ public class UserService {
         serviceWorker.setAge(age);
         serviceWorker.setNoteBookNumber(noteBookNumber);
         storageService.addUser(serviceWorker);
-        //userFileService.writeFromFile(storageService.getUsers());
+        //    userFileService.writeFromFile(storageService.getUsers());
     }
 
     public void createSalesPerson() throws UserException, IOException {
@@ -105,6 +106,6 @@ public class UserService {
         salesPerson.setAge(age);
         salesPerson.setSalesLevel(salesLevel);
         storageService.addUser(salesPerson);
-        //userFileService.writeFromFile(storageService.getUsers());
+        //  userFileService.writeFromFile(storageService.getUsers());
     }
 }

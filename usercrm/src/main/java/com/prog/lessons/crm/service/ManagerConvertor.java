@@ -14,10 +14,13 @@ public class ManagerConvertor {
         Manager manager = new Manager();
         List<String> fields = reflectionUserService.getFieldName(Manager.class);
         for (String field : fields) {
-            startIndex = managerLine.indexOf(field) + 2;
-            String value = managerLine.substring(startIndex, managerLine.substring(startIndex, managerLine.length()).indexOf(")", startIndex));
+            startIndex = managerLine.indexOf(field) + 11;
+
+            String value = managerLine.substring(startIndex, managerLine.substring(startIndex, managerLine.length()).indexOf("\'", startIndex)-1);
+
             reflectionUserService.setFieldByName(manager, field, value);
+
         }
-        return null;
+        return manager;
     }
 }

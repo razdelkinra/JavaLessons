@@ -14,7 +14,7 @@ public class UserController {
     CreateUserController createUserController = new CreateUserController();
     PrintUserController printUserController = new PrintUserController();
     UserFileService userFileService = new UserFileService();
-    StorageService storageService = new StorageService();
+    StorageService storageService = StorageService.getInstance();
 
     public void execute() throws IOException, UserException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));

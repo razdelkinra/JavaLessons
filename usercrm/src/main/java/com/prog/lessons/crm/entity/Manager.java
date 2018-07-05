@@ -53,7 +53,7 @@ public class Manager extends User {
                 "firstName='" + super.getFirstName() + '\'' +
                 ", lastName='" + super.getLastName() + '\'' +
                 ", phoneNumber='" + super.getPhoneNumber() + '\'' +
-                ", age=" + super.getAge() +
+                ", age='" + super.getAge() + '\'' +
                 ", carNumber='" + carNumber + '\'' +
                 ", yearBonus='" + yearBonus + '\'' +
                 '}';

@@ -1,12 +1,11 @@
 package com.prog.lessons.crm.controller;
 
-import com.prog.lessons.crm.service.ReflectionUserService;
 import com.prog.lessons.crm.service.StorageService;
 
 import java.io.IOException;
 
 public class PrintUserController {
-    StorageService storageService = new StorageService();
+    StorageService storageService = StorageService.getInstance();
 
     public void printAllUsers() throws IOException {
         storageService.getUsers().stream().forEach(user -> System.out.println(user.toString()));

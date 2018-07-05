@@ -10,9 +10,14 @@ import java.util.List;
 
 public class StorageService {
 
+    private static StorageService instance = new StorageService();
 
-    public StorageService() {
+    private StorageService() {
         // TODO: реализовать патттерн синглтон
+    }
+
+    public static StorageService getInstance() {
+        return instance;
     }
 
     private List<User> users = new ArrayList<>();
