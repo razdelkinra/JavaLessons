@@ -34,7 +34,7 @@ public class UserController {
                     // TODO: сделать поиск сотрудника по фамилии, и диапазону лет
                     break;
                 case "0":
-                    userFileService.writeFromFile(storageService.getUsers());
+                    userFileService.writeToFile(storageService.getUsers());
                     System.exit(0);
                     break;
                 default:

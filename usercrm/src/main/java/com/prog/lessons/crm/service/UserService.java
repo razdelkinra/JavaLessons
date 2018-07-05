@@ -44,7 +44,7 @@ public class UserService {
         manager.setAge(age);
         manager.setYearBonus(yearBonus);
         storageService.addUser(manager);
-        //userFileService.writeFromFile(storageService.getUsers());
+        userFileService.writeToFile(storageService.getUsers());
     }
 
     public void createServiceWorker() throws UserException, IOException {
@@ -75,7 +75,7 @@ public class UserService {
         serviceWorker.setAge(age);
         serviceWorker.setNoteBookNumber(noteBookNumber);
         storageService.addUser(serviceWorker);
-        //    userFileService.writeFromFile(storageService.getUsers());
+        //    userFileService.writeToFile(storageService.getUsers());
     }
 
     public void createSalesPerson() throws UserException, IOException {
@@ -106,6 +106,6 @@ public class UserService {
         salesPerson.setAge(age);
         salesPerson.setSalesLevel(salesLevel);
         storageService.addUser(salesPerson);
-        //  userFileService.writeFromFile(storageService.getUsers());
+        //  userFileService.writeToFile(storageService.getUsers());
     }
 }

@@ -13,7 +13,7 @@ public class StartCRMService {
     StorageService storageService = StorageService.getInstance();
     UserFileService userFileService = new UserFileService();
     ReflectionUserService reflectionUserService = new ReflectionUserService();
-    ManagerConvertor managerConvertor = new ManagerConvertor();
+    ManagerConverter managerConverter = new ManagerConverter();
 
     public void readUsers() throws IOException, InvocationTargetException, IllegalAccessException {
         // TODO: Считать всех юзеров из файла при старте программы, конвертировать их в List<Users>
@@ -23,7 +23,7 @@ public class StartCRMService {
         for (String s : lines) {
             if (s.startsWith("Manager") == true) {
                 Manager manager = new Manager();
-                manager = managerConvertor.convert(s);
+                manager = managerConverter.convert(s);
                 users.add(manager);
             }
         }
