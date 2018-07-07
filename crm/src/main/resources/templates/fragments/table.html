@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="">
+<body>
+
+
+<th:block layout:fragment="table">
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+
+            <div class="row">
+
+                <th:block layout:fragment="filter"></th:block>
+
+                <div class="col-md-1 pull-right">
+                    <a class="btn btn-primary" th:href="'javascript:dfgA.applyFilter()'">Filter</a>
+                </div>
+            </div>
+        </div>
+        <table class="table table-hover ">
+            <thead>
+
+            <th:block layout:fragment="hrow"></th:block>
+
+            </thead>
+
+            <tbody>
+
+            <th:block layout:fragment="rows"></th:block>
+
+
+            <tr th:if="${!page.hasContent()}">
+                <td colspan="5">
+                    There are no records yet.
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+
+        <div class="panel-footer">
+            <div class="row">
+                <div class="col-md-6">
+                    <th:block layout:fragment="buttons">
+                    </th:block>
+                </div>
+                <div class="col-md-6 pull-right">
+                    <div th:replace="fragments/pager :: pager"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</th:block>
+</body>
+</html>
+

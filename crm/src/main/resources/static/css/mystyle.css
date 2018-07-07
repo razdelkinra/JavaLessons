@@ -1,0 +1,356 @@
+h1 {
+    margin: auto;
+    color: #333;
+    font-family: 'Times New Roman' !important;
+    font-size: 54px;
+    font-weight: 300;
+    line-height: 60px;
+    letter-spacing: -0.015em;
+    margin-bottom: 48px;
+    max-width: 600px;
+    align-content: center;
+}
+
+h1:before {
+    content: '';
+    display: block;
+    height: 3px;
+    margin: 15px 0;
+    width: 50px;
+}
+
+p {
+    color: #555;
+    margin: auto;
+    font-family: 'Times New Roman' !important;
+    font-size: 20px;
+    font-weight: 400;
+    max-width: 600px;
+}
+
+.entry:not(:first-of-type) {
+    margin-top: 10px !important;
+}
+
+.glyphicon {
+    font-size: 12px !important;
+}
+
+input.form-control {
+    margin-top: 14px;
+}
+
+#checkboxForAnswer {
+    margin: 25px 0 0;
+    line-height: normal;
+    -webkit-transform: scale(2);
+    background-color: #5cb85c;
+    border-color: #5cb85c;
+
+}
+
+label {
+    margin-left: 15px;
+    margin-top: -14px;
+}
+
+a.remove_field {
+    margin: 750px;
+}
+
+.mdl-grid.center-items {
+    justify-content: center;
+}
+
+.mdl-grid {
+    margin-left: auto;
+    margin-right: auto;
+    margin: auto;
+    display: inherit;
+}
+
+.mdl-layout__content {
+    display: initial;
+}
+
+.mdl-card {
+    margin: 6px auto;
+    width: 270px;
+    border-radius: 2px;
+}
+
+.listcard {
+    margin: 2px 10px;
+    border-radius: 6px;
+}
+
+.mdl-textfield__input {
+    font-size: 14px;
+    padding-left: 13px;
+}
+
+.mdl-layout__header-row span.mdl-layout-title {
+    color: #882020;
+    text-transform: uppercase;
+}
+
+header.custom-header {
+    background: #f3f3f3;
+}
+
+.custom-header .material-icons {
+    color: rgba(0, 0, 0, 0.87);;
+}
+
+.custom-header a.mdl-navigation__link {
+    color: #882029;
+    font-weight: 700;
+    font-size: 19px;
+
+}
+
+.custom-header a.mdl-navigation__link:hover {
+    color: #882020;
+}
+
+.mdl-layout__drawer span.mdl-layout-title {
+    background: #111;
+    color: #ffb648;
+}
+
+.mdl-layout__drawer a.mdl-navigation__link {
+    color: #eee;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.mdl-layout__drawer a.mdl-navigation__link:hover {
+    color: #000;
+}
+
+.mdl-data-table td, .mdl-data-table th {
+    padding: 0 18px 12px 18px;
+    text-align: left;
+}
+
+a {
+    color: rgb(72, 68, 69);
+    text-decoration: none;
+}
+
+.mdl-textfield--floating-label.is-focused .mdl-textfield__label, .mdl-textfield--floating-label.is-dirty .mdl-textfield__label, .mdl-textfield--floating-label.has-placeholder .mdl-textfield__label {
+    color: rgb(72, 68, 69);
+    font-size: 15px;
+    top: 4px;
+    visibility: visible;
+}
+
+.mdl-textfield {
+    width: inherit;
+}
+
+.mdl-mini-footer__bottom-section {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}
+
+h1 {
+    font-size: 44px;
+    margin-bottom: 18px;
+    color: #882020;
+}
+
+h2 {
+    font-family: sans-serif-light;
+}
+
+.mdl-button {
+    font-family: sans-serif-light;
+    font-size: 12px;
+}
+
+.mdl-logo {
+    color: #131212;
+    float: right;
+    margin-top: 19px;
+    margin-right: 16px;
+    font-size: large;
+}
+
+.mdl-mini-footer__bottom-section {
+    position: fixed;
+    bottom: 0;
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+}
+
+.mdl-card__media {
+    background-color: rgb(255, 255, 255);
+}
+
+img {
+    width: 88%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 3px;
+}
+
+img .option {
+    width: 7%;
+}
+
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+    width: 300px;
+    text-align: left;
+    font-size: 12px;
+    overflow: auto;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.arrows {
+    text-decoration: none;
+    color: #98715a;
+    font-size: 14px;
+}
+
+.mdl-card__title-text {
+    font-size: 16px;
+    font-family: sans-serif-light;
+    align-self: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.mdl-navigation {
+    background-color: #f3f3f3;
+    width: 200px;
+}
+
+.pagination {
+    font-family: sans-serif-light;
+}
+
+.pagination li.active {
+    background-color: #6e85d2;
+}
+
+ul:not(.browser-default) {
+    padding-left: 10px;
+}
+
+input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
+    height: inherit;
+    padding-left: 15px;
+    padding-bottom: 5px;
+}
+
+.mdl-button mdl-js-button mdl-button--raised {
+    font-family: "Arial", sans-serif;
+}
+
+.listHotel {
+    padding-left: 60px;
+}
+
+.mdl-layout__header {
+    display: flex;
+}
+
+.mdl-card__supporting-text {
+    padding: 4px 16px;
+    font-size: 12px;
+    box-sizing: initial;
+}
+
+*, *:before, *:after {
+    box-sizing: initial;
+}
+
+.mdl-card__supporting-text_small {
+    padding: 4px 16px;
+    font-size: 12px;
+    box-sizing: initial;
+}
+
+.error_message {
+    color: red;
+    margin: initial;
+    font-size: 16px;
+}
+
+.mdl-card__title-text_rooms {
+    font-size: 12px;
+    font-family: sans-serif-light;
+    align-self: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.mdl-card__supporting-text_rooms{
+    padding: 4px 16px;
+    font-size: 13px;
+    box-sizing: initial;
+    font-family: 'Times New Roman' !important;
+    color: #353131;
+}

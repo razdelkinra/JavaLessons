@@ -13,9 +13,5 @@ public interface BaseRepository<T, ID extends Serializable>
 
     T getOne(ID id);
 
-/*    Iterable<T> findAll();
-
-    Iterable<T> findAll(Iterable<ID> ids);
-
-    <S extends T> Iterable<S> save(Iterable<S> var1);*/
+    Iterable<T> findAll();
 }

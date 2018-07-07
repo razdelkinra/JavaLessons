@@ -1,0 +1,137 @@
+/*Menu inverse dd menu*/
+.inverse-dropdown {
+    background-color: #222;
+    border-color: #080808;
+}
+
+.inverse-dropdown > li > a {
+    color: #999;
+}
+
+.inverse-dropdown > .divider {
+    background-color: #000;
+}
+
+/*Paging*/
+.table_paging {
+    margin: 0px;
+}
+
+/*Login form*/
+.panel-login {
+    margin-top: 200px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Header*/
+#main-container {
+    margin: 0px !important;
+}
+
+.row-footer {
+    margin: 0px !important;
+    padding-right: 10px;
+}
+
+.nav-custom {
+    float: none;
+}
+
+.lnode_childs {
+    margin-left: 20px;
+}
+
+/*Filter*/
+.custom-filter-columns div:first-child:nth-last-child(1) {
+    width: 100%;
+}
+
+.custom-filter-columns div:first-child:nth-last-child(2),
+.custom-filter-columns div:first-child:nth-last-child(2) ~ div {
+    width: 50%;
+    float: left;
+}
+
+.custom-filter-columns div:first-child:nth-last-child(2) {
+    padding-right: 10px;
+}
+
+.custom-filter-columns div:first-child:nth-last-child(2) ~ div {
+    padding-left: 10px;
+}
+
+/*Form*/
+.form-group.required .control-label:after {
+    content: " *";
+    color: red;
+}
+
+.required-custom {
+    color: red;
+}
+
+.mdl-grid.center-items {
+    justify-content: center;
+}
+
+.mdl-grid {
+    margin-left: auto;
+    margin-right: auto
+}
+
+.mdl-layout__content {
+    display: initial;
+}
+
+.mdl-layout__header-row span.mdl-layout-title {
+    color: #882020;
+    text-transform: uppercase;
+}
+
+header.custom-header {
+    background: #f3f3f3;
+}
+
+.custom-header .material-icons {
+    color: #fff;
+}
+
+.custom-header a.mdl-navigation__link {
+    color: #eee;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.mdl-layout__drawer span.mdl-layout-title {
+    background: #111;
+    color: #ffb648;
+}
+
+.mdl-layout__drawer a.mdl-navigation__link {
+    color: #eee;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.mdl-layout__drawer a.mdl-navigation__link:hover {
+    color: #000;
+}
+
+.mdl-textfield {
+    width: inherit;
+}
+
+.custom-header a.mdl-navigation__link:hover {
+    color: #882020;
+}
+
+.mdl-navigation {
+    background-color: #f3f3f3;
+    width: 200px;
+}
+
+input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
+    height: inherit;
+}

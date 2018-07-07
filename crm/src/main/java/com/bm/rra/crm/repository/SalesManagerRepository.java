@@ -6,6 +6,6 @@ import com.bm.rra.crm.repository.base.BaseRepository;
 
 public interface SalesManagerRepository extends BaseRepository<SalesManager, Long> {
 
-    SalesManager getById(Integer id);
+    SalesManager getById(Long id);
 
 }
