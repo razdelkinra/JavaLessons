@@ -7,14 +7,14 @@ import static org.junit.Assert.assertEquals;
 
 public class CustomHashMapImplTest {
 
-    CustomHashMapImpl<Integer, String> customHashMap;
+    CustomHashMapImpl<String, String> customHashMap;
 
     @Before
     public void init() {
         customHashMap = new CustomHashMapImpl<>();
-        customHashMap.add(1, "A");
-        customHashMap.add(2, "B");
-        customHashMap.add(3, "C");
+        customHashMap.add("A", "1");
+        customHashMap.add("B", "2");
+        customHashMap.add("C", "3");
     }
 
     @Test
@@ -24,13 +24,17 @@ public class CustomHashMapImplTest {
 
     @Test
     public void delete() {
-        customHashMap.delete(1);
+        customHashMap.delete("A");
         assertEquals(2, customHashMap.size());
+        assertEquals(null, customHashMap.get("A"));
 
     }
 
     @Test
     public void get() {
-        assertEquals("A", customHashMap.get(1));
+        assertEquals("1", customHashMap.get("A"));
+        assertEquals("2", customHashMap.get("B"));
+        assertEquals("3", customHashMap.get("C"));
+
     }
 }

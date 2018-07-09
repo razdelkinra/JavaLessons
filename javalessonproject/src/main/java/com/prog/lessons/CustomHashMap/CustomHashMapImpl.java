@@ -4,23 +4,16 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class CustomHashMapImpl<K, V> implements CustomHashMap<K, V> {
-    public static void main(String[] args) {
-        CustomHashMapImpl<Integer, String> customHashMap = new CustomHashMapImpl<>();
-        customHashMap.add(1, "A");
-        customHashMap.add(2, "B");
-        customHashMap.add(3, "C");
-        customHashMap.delete(2);
-        System.out.println(customHashMap.size);
-        System.out.println(customHashMap.get(2));
-    }
 
+    public static final int DEFAULT_CAPACITY = 16;  // константы выделяй
     private Entry<K, V>[] table;
-    private int size = 0;
-
+    private int size = 0; // по умолчанию инициализируется 0. Просто private int size;
 
     public CustomHashMapImpl() {
-        table = new Entry[16];
+        table = new Entry[DEFAULT_CAPACITY];
     }
+
+    // Повтори на листочке без подсматривания, на собеседовании обязательно спросят
 
     @Override
     public boolean add(K key, V value) {
@@ -126,7 +119,5 @@ public class CustomHashMapImpl<K, V> implements CustomHashMap<K, V> {
         public void setValue(V value) {
             this.value = value;
         }
-
-
     }
 }
