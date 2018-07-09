@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <title th:text="${title}">List Users</title>
+</head>
+<body>
+<div th:fragment="content">
+
+    <div>
+        <div layout:include="fragments/table :: table" th:remove="tag">
+            <tbody>
+            <tr th:each="user,iter : ${users}">
+                <div>
+                    <div th:text="${user.firstName}"></div>
+                    <div th:text="${user.lastName}"></div>
+                    <div th:text="${user.phoneNumber}"></div>
+                </div>
+            </tr>
+            </tbody>
+        </div>
+        <link rel="stylesheet" th:href="@{/css/mystyle.css}"/>
+    </div>
+</div>
+</body>
+</html>

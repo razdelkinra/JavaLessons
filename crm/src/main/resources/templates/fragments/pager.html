@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<ul class="pagination" th:fragment="pager" th:object="${page}">
+
+
+    <li th:if="*{hasPrevious()}">
+        <a th:href="'javascript:dfgA.applyPage('+*{number}+')'" data-tab="pager">Prev</a>
+    </li>
+
+    <li th:each="delta : ${#numbers.sequence( -4, 4)}"
+        th:with="current=${page.number+delta}"
+        th:if="${ page.number + delta ge 0  and page.number + delta lt page.totalPages }"
+        th:class="${delta eq 0} ? 'active'">
+
+        <a th:href="'javascript:dfgA.applyPage('+${current+1}+')'" data-tab="pager" th:text="${current+1}">X</a>
+
+    </li>
+
+    <li th:if="*{hasNext()}">
+        <a th:href="'javascript:dfgA.applyPage('+*{number+2}+')'" data-tab="pager">Next</a>
+    </li>
+</ul>
+
+</body>
+</html>
+
