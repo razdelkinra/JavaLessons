@@ -34,17 +34,22 @@ public class UserService {
         System.out.println("Введите возраст сотрудника");
         int age = Integer.parseInt(reader.readLine());
 
+        System.out.println("Введите номер машины менеджера");
+        String carNumber = reader.readLine();
+
         System.out.println("Введите годовой бонус менеджера");
         String yearBonus = reader.readLine();
 
-        Manager manager = new Manager();
-        manager.setFirstName(firstName);
-        manager.setLastName(lastName);
-        manager.setPhoneNumber(phoneNumber);
-        manager.setAge(age);
-        manager.setYearBonus(yearBonus);
+        Manager manager = Manager.newManagerBuilder()
+                .setFirstName(firstName)
+                .setAge(age)
+                .setLastName(lastName)
+                .setPhoneNumber(phoneNumber)
+                .setYearBonus(yearBonus)
+                .setCarNumber(carNumber)
+                .build();
         storageService.addUser(manager);
-        userFileService.writeToFile(storageService.getUsers());
+      //  userFileService.writeToFile(storageService.getUsers());
     }
 
     public void createServiceWorker() throws UserException, IOException {
@@ -68,14 +73,15 @@ public class UserService {
         System.out.println("Введите серийный номер ноутбука сервисного инженера");
         String noteBookNumber = reader.readLine();
 
-        ServiceWorker serviceWorker = new ServiceWorker();
-        serviceWorker.setFirstName(firstName);
-        serviceWorker.setLastName(lastName);
-        serviceWorker.setPhoneNumber(phoneNumber);
-        serviceWorker.setAge(age);
-        serviceWorker.setNoteBookNumber(noteBookNumber);
+        ServiceWorker serviceWorker = ServiceWorker.newServiceWorker()
+                .setFirstName(firstName)
+                .setLastName(lastName)
+                .setPhoneNumber(phoneNumber)
+                .setAge(age)
+                .setNoteBookNumber(noteBookNumber)
+                .build();
         storageService.addUser(serviceWorker);
-        //    userFileService.writeToFile(storageService.getUsers());
+        userFileService.writeToFile(storageService.getUsers());
     }
 
     public void createSalesPerson() throws UserException, IOException {
@@ -99,13 +105,14 @@ public class UserService {
         System.out.println("Введите объем продаж продавца");
         int salesLevel = Integer.parseInt(reader.readLine());
 
-        SalesPerson salesPerson = new SalesPerson();
-        salesPerson.setFirstName(firstName);
-        salesPerson.setLastName(lastName);
-        salesPerson.setPhoneNumber(phoneNumber);
-        salesPerson.setAge(age);
-        salesPerson.setSalesLevel(salesLevel);
+        SalesPerson salesPerson = SalesPerson.newSalesPersonBuilder()
+                .setFirstName(firstName)
+                .setLastName(lastName)
+                .setPhoneNumber(phoneNumber)
+                .setAge(age)
+                .setSalesLevel(salesLevel)
+                .build();
         storageService.addUser(salesPerson);
-        //  userFileService.writeToFile(storageService.getUsers());
+        userFileService.writeToFile(storageService.getUsers());
     }
 }

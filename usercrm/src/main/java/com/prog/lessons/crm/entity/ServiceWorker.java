@@ -8,8 +8,8 @@ public class ServiceWorker extends User {
         return noteBookNumber;
     }
 
-    public void setNoteBookNumber(String noteBookNumber) {
-        this.noteBookNumber = noteBookNumber;
+    public static ServiceWorkerBuilder newServiceWorker() {
+        return new ServiceWorker().new ServiceWorkerBuilder();
     }
 
     @Override
@@ -19,7 +19,41 @@ public class ServiceWorker extends User {
                 ", lastName='" + super.getLastName() + '\'' +
                 ", phoneNumber='" + super.getPhoneNumber() + '\'' +
                 ", age='" + super.getAge() + '\'' +
-                "noteBookNumber='" + noteBookNumber + '\'' +
+                ", noteBookNumber='" + noteBookNumber + '\'' +
                 '}';
+    }
+
+    public class ServiceWorkerBuilder extends UserBuilder {
+
+
+        public ServiceWorkerBuilder setNoteBookNumber(String noteBookNumber) {
+            ServiceWorker.this.noteBookNumber = noteBookNumber;
+            return this;
+        }
+
+        @Override
+        public ServiceWorkerBuilder setLastName(String lastName) {
+            return (ServiceWorkerBuilder) super.setLastName(lastName);
+        }
+
+        @Override
+        public ServiceWorkerBuilder setFirstName(String firstName) {
+            return (ServiceWorkerBuilder) super.setFirstName(firstName);
+        }
+
+        @Override
+        public ServiceWorkerBuilder setPhoneNumber(String phoneNumber) {
+            return (ServiceWorkerBuilder) super.setPhoneNumber(phoneNumber);
+        }
+
+        @Override
+        public ServiceWorkerBuilder setAge(int age) {
+            return (ServiceWorkerBuilder) super.setAge(age);
+        }
+
+        @Override
+        public ServiceWorker build() {
+            return ServiceWorker.this;
+        }
     }
 }

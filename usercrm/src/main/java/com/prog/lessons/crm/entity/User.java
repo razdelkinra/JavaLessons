@@ -10,36 +10,24 @@ public class User implements Comparator<User> {
     private String phoneNumber;
     private int age;
 
-    public String getFirstName() {
-        return firstName;
+    public static UserBuilder newUserBuilder() {
+        return new User().new UserBuilder();
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public String getFirstName() {
+        return firstName;
     }
 
     public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
     public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
     public int getAge() {
         return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     @Override
@@ -57,5 +45,31 @@ public class User implements Comparator<User> {
         return o1.getLastName().compareTo(o2.getLastName());
     }
 
+    public class UserBuilder {
+
+        public UserBuilder setLastName(String lastName) {
+            User.this.lastName = lastName;
+            return this;
+        }
+
+        public UserBuilder setFirstName(String firstName) {
+            User.this.firstName = firstName;
+            return this;
+        }
+
+        public UserBuilder setPhoneNumber(String phoneNumber) {
+            User.this.phoneNumber = phoneNumber;
+            return this;
+        }
+
+        public UserBuilder setAge(int age) {
+            User.this.age = age;
+            return this;
+        }
+
+        public User build() {
+            return User.this;
+        }
+    }
 }
 

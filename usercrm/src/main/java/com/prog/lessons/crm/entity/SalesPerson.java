@@ -4,12 +4,12 @@ public class SalesPerson extends User {
 
     private int salesLevel;
 
-    public int getSalesLevel() {
-        return salesLevel;
+    public static SalesPersonBuilder newSalesPersonBuilder() {
+        return new SalesPerson().new SalesPersonBuilder();
     }
 
-    public void setSalesLevel(int salesLevel) {
-        this.salesLevel = salesLevel;
+    public int getSalesLevel() {
+        return salesLevel;
     }
 
     @Override
@@ -23,7 +23,37 @@ public class SalesPerson extends User {
                 '}';
     }
 
+    public class SalesPersonBuilder extends UserBuilder {
 
+        public SalesPersonBuilder setSalesLevel(int salesLevel) {
+            SalesPerson.this.salesLevel = salesLevel;
+            return this;
+        }
+
+        @Override
+        public SalesPersonBuilder setLastName(String lastName) {
+            return (SalesPersonBuilder) super.setLastName(lastName);
+        }
+
+        @Override
+        public SalesPersonBuilder setFirstName(String firstName) {
+            return (SalesPersonBuilder) super.setFirstName(firstName);
+        }
+
+        @Override
+        public SalesPersonBuilder setPhoneNumber(String phoneNumber) {
+            return (SalesPersonBuilder) super.setPhoneNumber(phoneNumber);
+        }
+
+        @Override
+        public SalesPersonBuilder setAge(int age) {
+            return (SalesPersonBuilder) super.setAge(age);
+        }
+
+        @Override
+        public SalesPerson build() {
+            return SalesPerson.this;
+        }
+    }
 
 }
-

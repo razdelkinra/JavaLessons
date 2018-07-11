@@ -11,7 +11,7 @@ public class ManagerConverter {
 
     public Manager convert(String managerLine) throws InvocationTargetException, IllegalAccessException {
         int startIndex = 0;
-        Manager manager = new Manager();
+        Manager manager = Manager.newManagerBuilder().build();
         List<String> fields = reflectionUserService.getFieldName(Manager.class);
         for (String field : fields) {
             startIndex = managerLine.indexOf(field) + field.length() + 2;

@@ -10,6 +10,7 @@ public enum UserType {
     SALESPERSON(2, "Продавец"),
     SERVICEWORKER(3, "Сервисный инженер");
 
+    private static Map<Integer, UserType> userTypes;
     private String description;
     private int id;
 
@@ -18,16 +19,6 @@ public enum UserType {
         this.id = id;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    private static Map<Integer, UserType> userTypes;
-
     public static UserType getById(int id) throws UserException {
         for (UserType userType : UserType.values()) {
             if (userType.id == id) {
@@ -35,5 +26,13 @@ public enum UserType {
             }
         }
         throw new UserException("Нет типа юзера с  id= " + id);
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public int getId() {
+        return id;
     }
 }

@@ -5,41 +5,16 @@ public class Manager extends User {
     private String carNumber;
     private String yearBonus;
 
+    public static ManagerBuilder newManagerBuilder() {
+        return new Manager().new ManagerBuilder();
+    }
+
     public String getCarNumber() {
         return carNumber;
     }
 
-    public void setCarNumber(String carNumber) {
-        this.carNumber = carNumber;
-    }
-
     public String getYearBonus() {
         return yearBonus;
-    }
-
-    public void setYearBonus(String yearBonus) {
-        this.yearBonus = yearBonus;
-    }
-
-
-    @Override
-    public void setFirstName(String firstname) {
-        super.setFirstName(firstname);
-    }
-
-    @Override
-    public void setLastName(String lastName) {
-        super.setLastName(lastName);
-    }
-
-    @Override
-    public void setPhoneNumber(String phoneNumber) {
-        super.setPhoneNumber(phoneNumber);
-    }
-
-    @Override
-    public void setAge(int age) {
-        super.setAge(age);
     }
 
     @Override
@@ -57,5 +32,43 @@ public class Manager extends User {
                 ", carNumber='" + carNumber + '\'' +
                 ", yearBonus='" + yearBonus + '\'' +
                 '}';
+    }
+
+    public class ManagerBuilder extends UserBuilder {
+
+
+        public ManagerBuilder setCarNumber(String carNumber) {
+            Manager.this.carNumber = carNumber;
+            return this;
+        }
+
+        public ManagerBuilder setYearBonus(String yearBonus) {
+            Manager.this.yearBonus = yearBonus;
+            return this;
+        }
+
+        @Override
+        public ManagerBuilder setLastName(String lastName) {
+            return (ManagerBuilder) super.setLastName(lastName);
+        }
+
+        @Override
+        public ManagerBuilder setFirstName(String firstName) {
+            return (ManagerBuilder) super.setFirstName(firstName);
+        }
+
+        @Override
+        public ManagerBuilder setPhoneNumber(String phoneNumber) {
+            return (ManagerBuilder) super.setPhoneNumber(phoneNumber);
+        }
+
+        @Override
+        public ManagerBuilder setAge(int age) {
+            return (ManagerBuilder) super.setAge(age);
+        }
+
+        public Manager build() {
+            return Manager.this;
+        }
     }
 }
