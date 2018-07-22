@@ -8,7 +8,7 @@ public class ServiceWorker extends User {
         return noteBookNumber;
     }
 
-    public static ServiceWorkerBuilder newServiceWorker() {
+    public static ServiceWorkerBuilder builder() {
         return new ServiceWorker().new ServiceWorkerBuilder();
     }
 

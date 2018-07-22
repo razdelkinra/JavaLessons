@@ -4,7 +4,7 @@ public class SalesPerson extends User {
 
     private int salesLevel;
 
-    public static SalesPersonBuilder newSalesPersonBuilder() {
+    public static SalesPersonBuilder builder() {
         return new SalesPerson().new SalesPersonBuilder();
     }
 

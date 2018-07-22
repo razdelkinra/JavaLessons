@@ -22,7 +22,7 @@ public class StartCRMService {
         List<User> users = new ArrayList<>();
         for (String s : lines) {
             if (s.startsWith("Manager") == true) {
-                Manager manager = Manager.newManagerBuilder().build();
+                Manager manager = Manager.builder().build();
                 manager = managerConverter.convert(s);
                 users.add(manager);
             }

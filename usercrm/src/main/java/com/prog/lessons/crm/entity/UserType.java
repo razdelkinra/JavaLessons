@@ -25,7 +25,7 @@ public enum UserType {
                 return userType;
             }
         }
-        throw new UserException("Нет типа юзера с  id= " + id);
+        throw new UserException("Un support type user id = " + id);
     }
 
     public String getDescription() {

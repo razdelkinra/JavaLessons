@@ -40,7 +40,7 @@ public class UserService {
         System.out.println("Введите годовой бонус менеджера");
         String yearBonus = reader.readLine();
 
-        Manager manager = Manager.newManagerBuilder()
+        Manager manager = Manager.builder()
                 .setFirstName(firstName)
                 .setAge(age)
                 .setLastName(lastName)
@@ -73,7 +73,7 @@ public class UserService {
         System.out.println("Введите серийный номер ноутбука сервисного инженера");
         String noteBookNumber = reader.readLine();
 
-        ServiceWorker serviceWorker = ServiceWorker.newServiceWorker()
+        ServiceWorker serviceWorker = ServiceWorker.builder()
                 .setFirstName(firstName)
                 .setLastName(lastName)
                 .setPhoneNumber(phoneNumber)
@@ -105,7 +105,7 @@ public class UserService {
         System.out.println("Введите объем продаж продавца");
         int salesLevel = Integer.parseInt(reader.readLine());
 
-        SalesPerson salesPerson = SalesPerson.newSalesPersonBuilder()
+        SalesPerson salesPerson = SalesPerson.builder()
                 .setFirstName(firstName)
                 .setLastName(lastName)
                 .setPhoneNumber(phoneNumber)

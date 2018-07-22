@@ -5,7 +5,7 @@ public class Manager extends User {
     private String carNumber;
     private String yearBonus;
 
-    public static ManagerBuilder newManagerBuilder() {
+    public static ManagerBuilder builder() {
         return new Manager().new ManagerBuilder();
     }
 

@@ -1,11 +1,7 @@
 package com.bm.rra.crm.entity;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
+import javax.persistence.*;
 
-@MappedSuperclass
 public class User {
 
     @Id
@@ -15,7 +11,7 @@ public class User {
 
     private String firstName;
     private String lastName;
-    private String phoneNumber;
+    String phoneNumber;
 
     public Long getId() {
         return id;
