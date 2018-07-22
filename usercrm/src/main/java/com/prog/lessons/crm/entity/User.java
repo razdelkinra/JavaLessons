@@ -1,13 +1,15 @@
 package com.prog.lessons.crm.entity;
 
 
+import jdk.nashorn.internal.objects.annotations.Getter;
+
 import java.util.Comparator;
 
 public class User implements Comparator<User> {
-
     private String firstName;
     private String lastName;
     private String phoneNumber;
+
     private int age;
 
     public static UserBuilder newUserBuilder() {
