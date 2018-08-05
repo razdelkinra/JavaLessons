@@ -2,9 +2,9 @@ package com.bm.rra.crm.controller;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HomeController {
@@ -12,9 +12,10 @@ public class HomeController {
     private String message;
 
     @RequestMapping(value = {"/", "/hello"}, method = RequestMethod.GET)
-    public String hello(Model model) {
-        model.addAttribute("message", message);
-        return "hello";
+    public ModelAndView hello(ModelAndView model) {
+        model.setViewName("crm/hello");
+        model.addObject("message", message);
+        return model;
     }
 
 }

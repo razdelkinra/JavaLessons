@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 @Entity
 @Table(name = "users")
 @SecondaryTable(name = "sales")
-public class SalesManager  {
+public class SalesManager {
 
     @Id
     @GeneratedValue
