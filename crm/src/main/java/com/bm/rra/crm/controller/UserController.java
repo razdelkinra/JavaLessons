@@ -32,25 +32,4 @@ public class UserController {
                 .addObject("users", salesManagerService.findAll());
         return modelAndView;
     }
-
-    @RequestMapping("/crm/user")
-    public ModelAndView user(ModelAndView modelAndView) {
-
-        //salesManagerService.save(user);
-        modelAndView.setViewName("crm/user");
-        return modelAndView;
-    }
-
-
-    @PostMapping("/crm/user")
-    public ModelAndView saveUser(ModelAndView modelAndView, @ModelAttribute("user") User user) {
-
-        System.out.println(user);
-        //salesManagerService.save(user);
-        modelAndView.setViewName("crm/user");
-        modelAndView
-                .addObject("users", salesManagerService.findAll());
-        return modelAndView;
-    }
-
 }

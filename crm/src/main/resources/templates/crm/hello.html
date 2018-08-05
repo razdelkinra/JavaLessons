@@ -6,11 +6,12 @@
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
 </head>
 <body>
+<div th:fragment="content">
 <h1>Welcome</h1>
 
 <!--/*@thymesVar id="message" type=""*/-->
 <h2 th:utext="${message}">..!..</h2>
-
+</div>
 
 </body>
 

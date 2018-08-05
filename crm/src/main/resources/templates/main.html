@@ -34,5 +34,10 @@
 
 <body style="width: 480px; height: 630px;">
 <!--<nav th:replace="fragments/header :: header"/>-->
+
+<main class="mdl-layout__content" style="width: 480px; height: 630px;">
+    <h3 th:text="${title}" th:unless="${title} == null"></h3>
+    <div th:replace="${view} :: content"/>
+</main>
 </body>
 </html>
