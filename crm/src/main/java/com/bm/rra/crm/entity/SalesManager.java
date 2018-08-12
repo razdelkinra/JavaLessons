@@ -20,6 +20,14 @@ public class SalesManager {
     @Column(table = "sales")
     private BigDecimal yearBonus;
 
+    public SalesManager() {
+    }
+
+    public SalesManager(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
     public Long getId() {
         return id;
     }

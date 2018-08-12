@@ -16,6 +16,10 @@ public class ManagerServiceImpl extends UserServiceImpl<Manager, Long> implement
 
     private ManagerRepository managerRepository;
 
+    public ManagerServiceImpl() {
+
+    }
+
     protected BaseRepository<Manager, Long> getRepository() {
         return managerRepository;
     }

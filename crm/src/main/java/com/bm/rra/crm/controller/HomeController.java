@@ -11,11 +11,13 @@ public class HomeController {
     @Value("${welcome.message}")
     private String message;
 
-    @RequestMapping(value = {"/", "/hello"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/", "crm/hello"}, method = RequestMethod.GET)
     public ModelAndView hello(ModelAndView model) {
         model.setViewName("crm/hello");
         model.addObject("message", message);
         return model;
     }
+
+
 
 }

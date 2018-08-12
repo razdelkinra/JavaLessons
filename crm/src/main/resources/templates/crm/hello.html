@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <title>Welcome</title>
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
 </head>
 <body>
 <div th:fragment="content">
-<h1>Welcome</h1>
-
-<!--/*@thymesVar id="message" type=""*/-->
-<h2 th:utext="${message}">..!..</h2>
+    <h2 th:utext="${message}">..!..</h2>
+    <a th:href="@{/crm/list}">Список сотудников </a>
 </div>
-
 </body>
-
 </html>

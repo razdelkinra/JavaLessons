@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
->
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title th:text="${title}">Title</title>
+    <meta charset="UTF-8"/>
+    <title>Add</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
 </head>
 <body>
-
-    <form method="post" th:object="${user}">
-        <div>
-            <input th:field="*{user.firstName}" id="firstName" name="firstName" type="text"/>
-            <label for="firstName"></label>
-        </div>
-    </form>
-    <link rel="stylesheet" th:href="@{/css/mystyle.css}"/>
+<div th:fragment="content">
+<h1>Add new User</h1>
+<form  th:action="@{user}" th:object="${user}" method="post">
+    First Name:
+    <input type="text" th:field="*{firstName}"/>
+    <br/>
+    Last Name:
+    <input type="text" th:field="*{lastName}"/>
+    <br/>
+    <input type="submit" value="Create"/>
+</form>
+</div>
 </body>
 </html>
