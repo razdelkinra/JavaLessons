@@ -16,6 +16,10 @@ public class SalesManagerServiceImpl extends UserServiceImpl<SalesManager, Long>
 
     private SalesManagerRepository salesManagerRepository;
 
+    public SalesManagerServiceImpl() {
+
+    }
+
     protected BaseRepository<SalesManager, Long> getRepository() {
         return salesManagerRepository;
     }

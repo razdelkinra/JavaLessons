@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
+import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 @Controller
@@ -22,7 +23,7 @@ public class UserController {
         model.setViewName("crm/list");
         model.addObject("users",
                 StreamSupport.
-                        stream(salesManagerService.findAll().spliterator(), false).distinct());
+                        stream(salesManagerService.findAll().spliterator(), false).distinct().collect(Collectors.toList()));
         return model;
     }
 

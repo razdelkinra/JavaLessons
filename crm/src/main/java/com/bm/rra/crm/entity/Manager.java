@@ -1,11 +1,25 @@
 package com.bm.rra.crm.entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "users")
 @SecondaryTable(name = "managers")
 public class Manager {
+    public Manager(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    @Override
+    public String toString() {
+        return "Manager{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                '}';
+    }
 
     @Id
     @GeneratedValue
@@ -57,4 +71,6 @@ public class Manager {
     public void setCarNumber(String carNumber) {
         this.carNumber = carNumber;
     }
+
+
 }
