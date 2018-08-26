@@ -4,6 +4,7 @@ import com.bm.rra.crm.entity.SalesManager;
 import com.bm.rra.crm.service.SalesManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -35,8 +36,15 @@ public class UserController {
     }
 
     @RequestMapping(value = "/crm/user", method = RequestMethod.POST)
-    public String saveUser(ModelAndView model, @Valid SalesManager user) {
+    public String saveUser(@Valid SalesManager user) {
         salesManagerService.save(user);
         return "redirect:list";
+    }
+
+    @RequestMapping(value = "/crm/delete/{id}", method = RequestMethod.GET)
+    public ModelAndView deleteUser(@PathVariable ("id") Long id) {
+        SalesManager user = salesManagerService.getById(id);
+        salesManagerService.delete(user);
+        return new ModelAndView("crm/list");
     }
 }

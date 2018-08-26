@@ -14,10 +14,19 @@
             <tr>
                 <th>First Name</th>
                 <th>Last Name</th>
+                <th>Edit/Delete</th>
+
             </tr>
             <tr th:each ="user : ${users}">
                 <td th:utext="${user.firstName}">...</td>
                 <td th:utext="${user.lastName}">...</td>
+                <td>
+
+                        <!--<a th:href="@{/edit/{id}(id=${user.getId()})}" >Delete</a>-->
+                <a href="/crm/delete/${user.id}">Delete1</a>
+
+                </td>
+
             </tr>
         </table>
     </div>
