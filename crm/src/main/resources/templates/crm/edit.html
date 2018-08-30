@@ -2,13 +2,14 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <title>Add</title>
+    <title>Edit</title>
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
 </head>
 <body>
 <div th:fragment="content">
-    <h1>Add new User</h1>
-    <form action="/crm/user/" th:object="${user}" method="post">
+    <h1>Edit User</h1>
+    <form action="/crm/editsave" th:object="${user}" method="post">
+        <input type="hidden" th:field="*{id}"/>
         First Name:
         <input type="text" th:field="*{firstName}"/>
         <br/>

@@ -20,7 +20,8 @@ public class UserController {
     SalesManagerService salesManagerService;
 
     @RequestMapping(value = "/crm/list", method = RequestMethod.GET)
-    public ModelAndView userList(ModelAndView model) {
+    public ModelAndView userList() {
+        ModelAndView model = new ModelAndView();
         model.setViewName("crm/list");
         model.addObject("users",
                 StreamSupport.
@@ -29,22 +30,37 @@ public class UserController {
     }
 
     @RequestMapping(value = "/crm/user", method = RequestMethod.GET)
-    public ModelAndView addNewUser(ModelAndView model, @Valid SalesManager user) {
+    public ModelAndView addNewUser(@Valid SalesManager user) {
+        ModelAndView model = new ModelAndView();
         model.setViewName("crm/user");
         model.addObject("user", salesManagerService.save(user));
         return model;
     }
 
     @RequestMapping(value = "/crm/user", method = RequestMethod.POST)
-    public String saveUser(@Valid SalesManager user) {
+    public ModelAndView saveUser(@Valid SalesManager user) {
         salesManagerService.save(user);
-        return "redirect:list";
+        return userList();
     }
 
     @RequestMapping(value = "/crm/delete/{id}", method = RequestMethod.GET)
-    public ModelAndView deleteUser(@PathVariable ("id") Long id) {
+    public ModelAndView deleteUser(@PathVariable("id") Long id) {
         SalesManager user = salesManagerService.getById(id);
         salesManagerService.delete(user);
-        return new ModelAndView("crm/list");
+        return userList();
+    }
+
+    @RequestMapping(value = "/crm/edit/{id}", method = RequestMethod.GET)
+    public ModelAndView edit(@PathVariable("id") Long id) {
+        ModelAndView model = new ModelAndView();
+        model.setViewName("crm/edit");
+        model.addObject("user", salesManagerService.getById(id));
+        return model;
+    }
+
+    @RequestMapping(value = "/crm/editsave", method = RequestMethod.POST)
+    public ModelAndView editsave(@Valid SalesManager user) {
+        salesManagerService.save(user);
+        return userList();
     }
 }
