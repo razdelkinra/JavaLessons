@@ -1,9 +1,11 @@
 package com.bm.rra.crm.controller;
 
 import com.bm.rra.crm.entity.SalesManager;
+import com.bm.rra.crm.entity.User;
 import com.bm.rra.crm.service.SalesManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -30,11 +32,9 @@ public class UserController {
     }
 
     @RequestMapping(value = "/crm/user", method = RequestMethod.GET)
-    public ModelAndView addNewUser(@Valid SalesManager user) {
-        ModelAndView model = new ModelAndView();
-        model.setViewName("crm/user");
-        model.addObject("user", salesManagerService.save(user));
-        return model;
+    public String addNewUser(Model model) {
+        model.addAttribute(new User());
+        return "crm/user";
     }
 
     @RequestMapping(value = "/crm/user", method = RequestMethod.POST)
@@ -58,8 +58,8 @@ public class UserController {
         return model;
     }
 
-    @RequestMapping(value = "/crm/editsave", method = RequestMethod.POST)
-    public ModelAndView editsave(@Valid SalesManager user) {
+    @RequestMapping(value = "/crm/update", method = RequestMethod.PUT)
+    public ModelAndView update(@Valid SalesManager user) {
         salesManagerService.save(user);
         return userList();
     }

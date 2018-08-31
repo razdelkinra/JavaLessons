@@ -103,9 +103,10 @@ header.custom-header {
 }
 
 .custom-header a.mdl-navigation__link {
-    color: #882029;
+    color: black;
     font-weight: 700;
     font-size: 19px;
+    align-content: center;
 
 }
 

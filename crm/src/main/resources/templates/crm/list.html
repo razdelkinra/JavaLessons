@@ -6,19 +6,17 @@
 </head>
 <body>
 <div th:fragment="content">
-    <h1>Список сотрудников:</h1>
-        <a href="/crm/user">Добавить нового сотрудника</a>
-    <br/><br/>
-    <div>
-        <table border="1">
+    <div class="table-users">
+        <div class="header">Users</div>
+        <table cellspacing="0">
             <tr>
                 <th>First Name</th>
                 <th>Last Name</th>
-                <th>Edit/Delete</th>
+                <th>Action</th>
             </tr>
             <tr th:each ="user : ${users}">
-                <td th:utext="${user.firstName}">...</td>
-                <td th:utext="${user.lastName}">...</td>
+                <td th:utext="${user.firstName}"></td>
+                <td th:utext="${user.lastName}"></td>
                 <td>
                 <a th:href="@{/crm/edit/{id}(id=${user.id})}">Edit</a>
                     <a th:href="@{/crm/delete/{id}(id=${user.id})}">Delete</a>
