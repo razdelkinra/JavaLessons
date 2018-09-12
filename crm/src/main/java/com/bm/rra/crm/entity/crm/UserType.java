@@ -1,4 +1,4 @@
-package com.bm.rra.crm.entity;
+package com.bm.rra.crm.entity.crm;
 
 import java.util.Map;
 

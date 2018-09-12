@@ -1,7 +1,7 @@
 package com.bm.rra.crm.controller;
 
-import com.bm.rra.crm.entity.SalesManager;
-import com.bm.rra.crm.entity.User;
+import com.bm.rra.crm.entity.crm.SalesManager;
+import com.bm.rra.crm.entity.crm.User;
 import com.bm.rra.crm.service.SalesManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

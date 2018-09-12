@@ -1,6 +1,6 @@
 package com.bm.rra.crm.service;
 
-import com.bm.rra.crm.entity.SalesManager;
+import com.bm.rra.crm.entity.crm.SalesManager;
 import com.bm.rra.crm.repository.SalesManagerRepository;
 import com.bm.rra.crm.repository.base.BaseRepository;
 import org.springframework.beans.factory.annotation.Autowired;

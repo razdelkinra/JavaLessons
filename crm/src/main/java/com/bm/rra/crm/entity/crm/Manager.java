@@ -1,12 +1,25 @@
-package com.bm.rra.crm.entity;
+package com.bm.rra.crm.entity.crm;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "users")
-@SecondaryTable(name = "sales")
-public class SalesManager {
+@SecondaryTable(name = "managers")
+public class Manager {
+    public Manager(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    @Override
+    public String toString() {
+        return "Manager{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                '}';
+    }
 
     @Id
     @GeneratedValue
@@ -16,17 +29,8 @@ public class SalesManager {
     private String firstName;
     private String lastName;
     private String phoneNumber;
-
-    @Column(table = "sales")
-    private BigDecimal yearBonus;
-
-    public SalesManager() {
-    }
-
-    public SalesManager(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
+    @Column(table = "managers")
+    private String carNumber;
 
     public Long getId() {
         return id;
@@ -60,11 +64,13 @@ public class SalesManager {
         this.phoneNumber = phoneNumber;
     }
 
-    public BigDecimal getYearBonus() {
-        return yearBonus;
+    public String getCarNumber() {
+        return carNumber;
     }
 
-    public void setYearBonus(BigDecimal yearBonus) {
-        this.yearBonus = yearBonus;
+    public void setCarNumber(String carNumber) {
+        this.carNumber = carNumber;
     }
+
+
 }

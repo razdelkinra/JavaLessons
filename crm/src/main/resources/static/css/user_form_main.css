@@ -173,7 +173,8 @@ iframe {
 }
 
 .wrap-contact100 {
-  width: 670px;
+  width: 570px;
+  height: 600px;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
