@@ -1,16 +1,10 @@
 package com.bm.rra.crm;
 
-import com.bm.rra.crm.entity.Manager;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 @SpringBootApplication
 @ComponentScan(basePackages = {"com.bm.rra.crm"})
