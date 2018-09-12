@@ -1,11 +1,8 @@
-package com.bm.rra.crm.entity;
+package com.bm.rra.crm.entity.crm;
 
 import javax.persistence.*;
 
-@Entity
-@Table(name = "users")
-@SecondaryTable(name = "serviceworkers")
-public class ServiceWorker {
+public class User {
 
     @Id
     @GeneratedValue
@@ -14,9 +11,7 @@ public class ServiceWorker {
 
     private String firstName;
     private String lastName;
-    private String phoneNumber;
-    @Column(table = "serviceworkers")
-    private String noteBookNumber;
+    String phoneNumber;
 
     public Long getId() {
         return id;
@@ -48,13 +43,5 @@ public class ServiceWorker {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
-    }
-
-    public String getNoteBookNumber() {
-        return noteBookNumber;
-    }
-
-    public void setNoteBookNumber(String noteBookNumber) {
-        this.noteBookNumber = noteBookNumber;
     }
 }
